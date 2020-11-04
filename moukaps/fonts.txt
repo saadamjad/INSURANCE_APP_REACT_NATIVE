@@ -1,0 +1,6 @@
+   color: '#838383',
+          fontFamily: 'Montserrat-Regular',
+
+
+
+                  fontFamily:'FredokaOne-Regular'
