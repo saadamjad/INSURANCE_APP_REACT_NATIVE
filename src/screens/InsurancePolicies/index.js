@@ -49,7 +49,7 @@ const App = (props) => {
     },
   ]);
   const callfunction = () => {
-    props.navigation.navigate('orderdetailsinsurance');
+    props.navigation.navigate('OrderDetailsRelatives');
   };
   return (
     <ImageBackground

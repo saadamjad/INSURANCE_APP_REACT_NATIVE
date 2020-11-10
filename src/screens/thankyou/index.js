@@ -1,24 +1,3 @@
-// import React from 'react';
-// import {View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
-// import LinearGradient from 'react-native-linear-gradient';
-// import Fontisto from 'react-native-vector-icons/Fontisto';
-// import Ionicons from 'react-native-vector-icons/Ionicons';
-
-// const App = (props) => {
-//   const callingfunction = () => {
-//     props.navigation.navigate('thankyou');
-//   };
-//   return (
-//     <SafeAreaView
-//       style={{
-//         flex: 1,
-//       }}>
-//       <Text onPress={() => callingfunction()}> THANKYOU </Text>
-//     </SafeAreaView>
-//   );
-// };
-// export default App;
-
 import React, {useState} from 'react';
 import {Text, View, SafeAreaView, TouchableOpacity, Image} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';

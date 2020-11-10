@@ -18,7 +18,7 @@ import insurancepolicies from '../screens/InsurancePolicies';
 import OurProducts from '../screens/OurProducts';
 import TravelInsurance from '../screens/TravelInsurance';
 import MakeaPayment from '../screens/MakeaPayment';
-import orderdetailsinsurance from '../screens/share_UGGLAN';
+import OrderDetailsRelatives from '../screens/OrderDetailsRelatives';
 import visitwebsite from '../screens/orderdetails';
 import splash from '../screens/splash';
 // import hireProfile from '../screens/MakeaPayment';
@@ -110,8 +110,8 @@ function HomeStack() {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="orderdetailsinsurance"
-        component={orderdetailsinsurance} //
+        name="OrderDetailsRelatives"
+        component={OrderDetailsRelatives} //
         options={{headerShown: false}}
       />
 
@@ -120,11 +120,7 @@ function HomeStack() {
         component={MakeaPayment} //
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="makepayment"
-        component={orderdetailsinsurance} //
-        options={{headerShown: false}}
-      />
+
       <Stack.Screen
         name="orderconfirmed"
         component={orderconfirmed} //
@@ -135,52 +131,6 @@ function HomeStack() {
         component={visitwebsite} //
         options={{headerShown: false}}
       /> */}
-    </Stack.Navigator>
-  );
-}
-function MainStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="revieworderdetails"
-        component={revieworderdetails} //
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen
-        name="HomeScreen"
-        component={Home} //
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen
-        name="insurancepolicies"
-        component={insurancepolicies} //
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen
-        name="OurProducts"
-        component={OurProducts} //
-        options={{headerShown: false}}
-      />
-
-      {/* <Stack.Screen
-        name="hireProfile"
-        component={hireProfile} //
-        options={{headerShown: false}}
-      /> */}
-      <Stack.Screen
-        name="orderdetailsinsurance"
-        component={orderdetailsinsurance} //
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen
-        name="orderconfirmed"
-        component={orderconfirmed}
-        options={{headerShown: false}}
-      />
     </Stack.Navigator>
   );
 }
@@ -268,7 +218,7 @@ function MyTabs() {
 function App() {
   return (
     <NavigationContainer headerMode="none">
-      <Stack.Navigator initialRouteName="mydrawer">
+      <Stack.Navigator initialRouteName="Auth">
         <Stack.Screen
           name="Auth"
           component={AuthStack}
