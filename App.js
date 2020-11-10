@@ -29,8 +29,6 @@ import {ImageBackground, Text, View, Image} from 'react-native';
 
 import Stack from './src/navigations/stacknavigation';
 
-import Home from './src/screens/Home';
-
 import GlobalFont from 'react-native-global-font';
 export default class App extends React.PureComponent {
   state = {

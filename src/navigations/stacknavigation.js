@@ -13,8 +13,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import login from '../screens/login';
 import signup from '../screens/signup';
 import loginpage from '../screens/login_Page';
-import allcontacts from '../screens/all_contacts';
-import call from '../screens/call';
+import revieworderdetails from '../screens/ReviewOrderDetails';
+import insurancepolicies from '../screens/InsurancePolicies';
 import calling from '../screens/calling';
 import travelinsuranceform from '../screens/hire someone';
 import revieworder from '../screens/hire_someones_profile';
@@ -38,13 +38,17 @@ function MyDrawer() {
         itemStyle: {marginVertical: 30},
       }}
       drawerContent={(props) => <DrawerContent {...props} />}>
-      <Drawer.Screen name="My Profile" component={MyTabs} />
+      <Drawer.Screen
+        name="My Profile"
+        component={MyTabs}
+        options={{headerShown: false}}
+      />
     </Drawer.Navigator>
   );
 }
 function AuthStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="login">
       <Stack.Screen
         name="splash"
         component={splash}
@@ -84,9 +88,9 @@ function HomeStack() {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="allcontacts"
+        name="revieworderdetails"
         //review order details
-        component={allcontacts}
+        component={revieworderdetails}
         options={{headerShown: false}}
       />
       <Stack.Screen
@@ -96,9 +100,10 @@ function HomeStack() {
       />
       <Stack.Screen
         name="insurancepolicies"
-        component={call} //
+        component={insurancepolicies} //
         options={{headerShown: false}}
       />
+
       <Stack.Screen
         name="insurancepoliciesform"
         component={calling} //
@@ -137,8 +142,8 @@ function MainStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="allcontacts"
-        component={allcontacts} //
+        name="revieworderdetails"
+        component={revieworderdetails} //
         options={{headerShown: false}}
       />
 
@@ -149,8 +154,8 @@ function MainStack() {
       />
 
       <Stack.Screen
-        name="call"
-        component={call} //
+        name="insurancepolicies"
+        component={insurancepolicies} //
         options={{headerShown: false}}
       />
 
@@ -187,6 +192,7 @@ function MyTabs() {
         name="Home"
         options={{
           tabBarLabel: 'Home',
+          headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon
               name="home"
@@ -200,6 +206,7 @@ function MyTabs() {
       <Tab.Screen
         name="Find Plans"
         options={{
+          headerShown: false,
           tabBarLabel: 'Find Plans',
           tabBarIcon: ({color, size}) => (
             <Icon
@@ -209,11 +216,12 @@ function MyTabs() {
             />
           ),
         }}
-        component={call}
+        component={insurancepolicies}
       />
       <Tab.Screen
         name="Pop"
         options={{
+          headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Image
               style={{width: 80, height: 80, marginTop: -40}}
@@ -222,12 +230,13 @@ function MyTabs() {
           ),
           tabBarLabel: '',
         }}
-        component={call}
+        component={insurancepolicies}
       />
       <Tab.Screen
         name="Contact"
         component={visitwebsite}
         options={{
+          headerShown: false,
           tabBarLabel: 'Contact',
           tabBarIcon: ({color, size}) => (
             <Icon
@@ -240,6 +249,7 @@ function MyTabs() {
       />
       <Tab.Screen
         options={{
+          headerShown: false,
           tabBarLabel: 'Account',
           tabBarIcon: ({color, size}) => (
             <Icon
@@ -258,7 +268,7 @@ function MyTabs() {
 function App() {
   return (
     <NavigationContainer headerMode="none">
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="mydrawer">
         <Stack.Screen
           name="Auth"
           component={AuthStack}

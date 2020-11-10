@@ -1,0 +1,113 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ugglan"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="29" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\debug\AndroidManifest.xml:5:5-77
+11-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\debug\AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:30:7-81
+12-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:30:24-78
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:4:5-67
+13-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:4:22-64
+14    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+14-->[com.facebook.flipper:flipper:0.54.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\1c7787ec82631e0394972c76bdabe608\flipper-0.54.0\AndroidManifest.xml:16:5-76
+14-->[com.facebook.flipper:flipper:0.54.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\1c7787ec82631e0394972c76bdabe608\flipper-0.54.0\AndroidManifest.xml:16:22-73
+15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Include required permissions for Google Maps API to run. -->
+15-->[:react-native-maps] C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-81
+15-->[:react-native-maps] C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-78
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\3ca81724f46a1af5d268488a528eb8e5\play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+16-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\3ca81724f46a1af5d268488a528eb8e5\play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+17
+18    <uses-feature
+18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\3ca81724f46a1af5d268488a528eb8e5\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+19        android:glEsVersion="0x00020000"
+19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\3ca81724f46a1af5d268488a528eb8e5\play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+20        android:required="true" />
+20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\3ca81724f46a1af5d268488a528eb8e5\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+21
+22    <application
+22-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:6:5-29:19
+23        android:name="com.ugglan.MainApplication"
+23-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:7:7-38
+24        android:allowBackup="false"
+24-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:11:7-34
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.1.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\639e914bfc1efa21e36199d3ff2c5eef\core-1.1.0\AndroidManifest.xml:24:18-86
+26        android:debuggable="true"
+27        android:icon="@mipmap/ic_launcher"
+27-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:9:7-41
+28        android:label="@string/app_name"
+28-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:8:7-39
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:10:7-52
+30        android:theme="@style/AppTheme"
+30-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:12:7-38
+31        android:usesCleartextTraffic="true" >
+31-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\debug\AndroidManifest.xml:7:18-53
+32        <meta-data
+32-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:13:7-15:63
+33            android:name="com.google.android.geo.API_KEY"
+33-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:14:6-51
+34            android:value="AIzaSyB5lmW3h19b8kNZhelMH1yDZ9-4zu6sYkM" />
+34-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:15:6-61
+35
+36        <uses-library
+36-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:16:6-84
+37            android:name="org.apache.http.legacy"
+37-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:16:20-57
+38            android:required="false" />
+38-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:16:58-82
+39
+40        <activity
+40-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:17:7-27:18
+41            android:name="com.ugglan.MainActivity"
+41-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:18:9-37
+42            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+42-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:20:9-86
+43            android:label="@string/app_name"
+43-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:19:9-41
+44            android:launchMode="singleTask"
+44-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:21:9-40
+45            android:windowSoftInputMode="adjustPan" >
+45-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:22:9-48
+46            <intent-filter>
+46-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:23:9-26:25
+47                <action android:name="android.intent.action.MAIN" />
+47-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:24:13-65
+47-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:24:21-62
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:25:13-73
+49-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:25:23-70
+50            </intent-filter>
+51        </activity>
+52        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+52-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:28:7-84
+52-->C:\Users\skluh\OneDrive\Desktop\Kahoodigitals projects\INSURANCE_APP_REACT_NATIVE\android\app\src\main\AndroidManifest.xml:28:17-81
+53        <activity
+53-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\fc8046cb9a5df9499609a5f7f8270b1b\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+54            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+54-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\fc8046cb9a5df9499609a5f7f8270b1b\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+55            android:exported="false"
+55-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\fc8046cb9a5df9499609a5f7f8270b1b\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+56            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+56-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\fc8046cb9a5df9499609a5f7f8270b1b\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+57
+58        <meta-data
+58-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\e1188422886186d18212cf0eabedd3d9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+59            android:name="com.google.android.gms.version"
+59-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\e1188422886186d18212cf0eabedd3d9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+60            android:value="@integer/google_play_services_version" />
+60-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\skluh\.gradle\caches\transforms-2\files-2.1\e1188422886186d18212cf0eabedd3d9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+61    </application>
+62
+63</manifest>

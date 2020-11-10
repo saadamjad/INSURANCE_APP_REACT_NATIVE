@@ -4,7 +4,7 @@ import {Text, View, SafeAreaView, TextInput, Image} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 const App = (props) => {
   const hireNowFunction = () => {
-    props.navigation.navigate('orderconfirmed');
+    props.navigation.navigate('revieworderdetails');
   };
 
   const [payment, setPayment] = useState([
