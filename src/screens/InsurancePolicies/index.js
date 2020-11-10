@@ -59,7 +59,9 @@ const App = (props) => {
         width: '100%',
         resizeMode: 'contain',
       }}>
-      <ScrollView contentContainerStyle={{flexGrow: 1}}>
+      <ScrollView
+        contentContainerStyle={{flexGrow: 1}}
+        showsVerticalScrollIndicator={false}>
         <SafeAreaView
           style={{width: '90%', alignSelf: 'center', paddingBottom: 80}}>
           {/* ==========Header Row========== */}
@@ -170,6 +172,7 @@ const App = (props) => {
                           color: '#ffff',
                           textAlign: 'center',
                           // fontWeight: 'bold',
+                          fontFamily: 'Montserrat-Regular',
                         }}>
                         Rs. 2900
                       </Text>
@@ -183,7 +186,8 @@ const App = (props) => {
                       <Text
                         style={{
                           fontSize: 8,
-                          color: '#727272',
+                          color: 'black',
+                          fontFamily: 'Montserrat-Regular',
                         }}>
                         {item.cardType}
                       </Text>
@@ -223,8 +227,10 @@ const App = (props) => {
                   <View style={{paddingLeft: 5, width: '50%'}}>
                     <Text
                       style={{
-                        color: '#727272',
+                        color: 'black',
                         fontSize: 11.5,
+                        fontFamily: 'Montserrat-Regular',
+
                         lineHeight: 19,
                       }}>
                       {item.coverageUpto}
@@ -233,8 +239,9 @@ const App = (props) => {
                   <View style={{paddingLeft: 5}}>
                     <Text
                       style={{
-                        color: '#727272',
+                        color: 'black',
                         fontSize: 11.5,
+                        fontFamily: 'Montserrat-Regular',
                         lineHeight: 19,
                       }}>
                       {item.destination}
@@ -273,9 +280,10 @@ const App = (props) => {
                   <View style={{paddingLeft: 5, width: '50%'}}>
                     <Text
                       style={{
-                        color: '#727272',
+                        color: 'black',
                         fontSize: 11.5,
                         lineHeight: 19,
+                        fontFamily: 'Montserrat-Regular',
                       }}>
                       {item.medicalCover}
                     </Text>
@@ -283,7 +291,8 @@ const App = (props) => {
                   <View style={{paddingLeft: 5}}>
                     <Text
                       style={{
-                        color: '#727272',
+                        color: 'black',
+                        fontFamily: 'Montserrat-Regular',
                         fontSize: 11.5,
                         lineHeight: 19,
                       }}>
@@ -333,7 +342,7 @@ const App = (props) => {
                       }}
                       titleStyle={{
                         // fontWeight: 'bold',
-                        fontFamily: 'Montserrat-Regular',
+                        fontFamily: 'Montserrat-Bold',
 
                         fontSize: 10,
                         letterSpacing: 0.5,

@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   ScrollView,
   TextInput,
+  TouchableOpacity,
 } from 'react-native';
 // import AntDesign from 'react-native-vector-icons/AntDesign';
 import Zocial from 'react-native-vector-icons/Zocial';
@@ -16,11 +17,11 @@ const App = (props) => {
     props.navigation.navigate('signup');
   };
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
       <View style={{flex: 0.3, width: '100%'}}>
         <Image
           source={require('../../assets/icons/10.png')}
-          resizeMode={'cover'}
+          resizeMode={'stretch'}
           style={{height: '100%', width: '100%'}}
         />
       </View>
@@ -42,22 +43,22 @@ const App = (props) => {
               color: 'black',
               textAlign: 'center',
               marginTop: 5,
-              fontFamily: 'Montserrat-Light',
+              fontFamily: 'Montserrat-Medium',
             }}>
             Log to see the insurance plans.
           </Text>
         </View>
 
-        {/* ==========Button========== */}
-
-        {/* =====Login Form===== */}
         <View
           style={{
-            width: '80%',
+            width: '90%',
             alignSelf: 'center',
             height: 50,
           }}>
-          <Text style={{color: '#858585', fontSize: 12}}> Email </Text>
+          <Text style={{color: 'black', fontSize: 12, marginBottom: 5}}>
+            {' '}
+            Email{' '}
+          </Text>
           <View
             style={{
               flexDirection: 'row',
@@ -88,12 +89,15 @@ const App = (props) => {
         </View>
         <View
           style={{
-            width: '80%',
+            width: '90%',
             alignSelf: 'center',
             height: 50,
             marginTop: 30,
           }}>
-          <Text style={{color: '#858585', fontSize: 12}}> Password </Text>
+          <Text style={{color: 'black', fontSize: 12, marginBottom: 5}}>
+            {' '}
+            Password{' '}
+          </Text>
           <View
             style={{
               flexDirection: 'row',
@@ -125,154 +129,127 @@ const App = (props) => {
 
         <View
           style={{
-            width: '80%',
+            width: '90%',
             alignSelf: 'center',
             height: 50,
-            marginTop: 15,
+            marginTop: 30,
           }}>
           <Button
             title="LOG IN"
             onPress={() => props.navigation.navigate('mydrawer')}
             buttonStyle={{
-              backgroundColor: '#ff235d',
               width: '100%',
 
               height: 50,
-              borderRadius: 5,
-              borderColor: '#ff235d',
               borderWidth: 2,
+              borderRadius: 6,
+              borderColor: '#fe4270',
+              backgroundColor: '#fe4270',
             }}
-            titleStyle={{fontSize: 12, color: 'white'}}
+            titleStyle={{
+              fontSize: 15,
+              color: 'white',
+              fontFamily: 'Montserrat-Regular',
+            }}
             containerStyle={{
-              marginVertical: 10,
               alignItems: 'center',
               justifyContent: 'center',
-              borderColor: '#ff235d',
-              borderWidth: 2,
             }}
           />
         </View>
 
-        <Text
-          style={{textAlign: 'center', marginVertical: 15, color: '#8d8d8d'}}>
-          or connect using
-        </Text>
-        <View
-          style={{
-            flexDirection: 'row',
-            width: '80%',
-            justifyContent: 'space-between',
-            alignSelf: 'center',
-            alignItems: 'center',
-            // marginTop: 10,
-          }}>
-          <Button
-            title="GUEST LOGIN"
-            onPress={() => SignUp()}
-            buttonStyle={{
-              height: 45,
-              borderWidth: 2,
-              borderRadius: 6,
-              borderColor: '#fe4270',
-              backgroundColor: 'white',
-              // paddingHorizontal: 30,
-            }}
-            titleStyle={{
-              color: '#fe4270',
-              fontSize: 14,
-              fontFamily: 'Montserrat-Regular',
-            }}
-            containerStyle={{
-              width: '47%',
-            }}
-          />
-          <Button
-            icon={<FontAwesome name="facebook" size={15} color="white" />}
-            title="Facebook"
-            onPress={() => SignUp()}
-            buttonStyle={{
-              height: 45,
-              borderWidth: 1,
-              borderRadius: 6,
-              borderColor: '#394cb8',
-              backgroundColor: '#3145b6',
-            }}
-            titleStyle={{
-              color: 'white',
-              fontSize: 14,
-              // fontWeight: 'bold',
-              fontFamily: 'Montserrat-Regular',
-              marginLeft: 20,
-            }}
-            containerStyle={{
-              width: '47%',
-            }}
-          />
-        </View>
-
-        {/* <View
-          style={{
-            flexDirection: 'row',
-            width: '80%',
-            alignSelf: 'center',
-            justifyContent: 'space-evenly',
-          }}>
-          <Button
-            title="GUEST LOGIN"
-            onPress={() => SignUp()}
-            buttonStyle={{
-              height: 45,
-              borderWidth: 2,
-              borderRadius: 6,
-              borderColor: '#fe4270',
-              backgroundColor: 'white',
-              // paddingHorizontal: 30,
-            }}
-            titleStyle={{
-              color: '#fe4270',
-              fontSize: 12,
-              fontWeight: 'bold',
-            }}
-            containerStyle={{
-              flex: 0.4,
-            }}
-          />
-          <Button
-            title="SIGN UP"
-            onPress={() => SignUp()}
-            buttonStyle={{
-              height: 45,
-              borderWidth: 1,
-              borderRadius: 6,
-              borderColor: '#fe4270',
-              backgroundColor: '#ec2f57',
-              // paddingHorizontal: 30,
-            }}
-            titleStyle={{
-              color: 'white',
-              fontSize: 12,
-              fontWeight: 'bold',
-            }}
-            containerStyle={{
-              flex: 0.4,
-            }}
-          />
-        </View>
-      
-       */}
         <Text
           style={{
             textAlign: 'center',
-            marginVertical: 10,
+            marginVertical: 15,
+            color: 'black',
+            fontFamily: 'Montserrat-Regular',
+          }}>
+          or connect using
+        </Text>
+
+        <View
+          style={{
+            flexDirection: 'row',
+            // justifyContent: 'space-evenly',
+            width: '90%',
+            marginBottom: 10,
+            marginTop: 10,
+            // paddingHorizontal: 10,
+            // marginVertical: 80,
+            // borderWidth: 1,
+            // justifyContent: 'space-between',
+            alignSelf: 'center',
+          }}>
+          <View style={{flex: 0.5}}>
+            <Button
+              title="GUEST LOGIN"
+              onPress={() => SignUp()}
+              buttonStyle={{
+                width: '90%',
+
+                height: 50,
+                borderWidth: 2,
+                borderRadius: 8,
+                borderColor: '#fe4270',
+                backgroundColor: 'white',
+              }}
+              titleStyle={{
+                fontSize: 15,
+                color: '#fe4270',
+                fontFamily: 'Montserrat-Regular',
+              }}
+              containerStyle={{
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            />
+          </View>
+          <View style={{flex: 0.5}}>
+            <Button
+              icon={<FontAwesome name="facebook" size={15} color="white" />}
+              title="Facebook"
+              onPress={() => SignUp()}
+              buttonStyle={{
+                width: '90%',
+                height: 50,
+                borderWidth: 1,
+                borderRadius: 8,
+                borderColor: '#394cb8',
+                backgroundColor: '#3145b6',
+              }}
+              titleStyle={{
+                fontSize: 15,
+                color: 'white',
+                // fontWeight: 'bold',
+                fontFamily: 'Montserrat-Regular',
+                marginLeft: 20,
+              }}
+              containerStyle={{
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            />
+          </View>
+        </View>
+
+        <Text
+          style={{
+            textAlign: 'center',
+            marginVertical: 13,
             fontSize: 10,
-            color: '#8d8d8d',
+            color: 'black',
+            fontFamily: 'Montserrat-Regular',
           }}>
           {' '}
           Don't have an account?{' '}
-          <Text style={{color: '#ec2f57'}}> Sign Up</Text>{' '}
+          <Text style={{color: '#ec2f57', fontFamily: 'Montserrat-Regular'}}>
+            {' '}
+            Sign Up
+          </Text>{' '}
         </Text>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 

@@ -32,7 +32,9 @@ const App = (props) => {
   };
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
-      <ScrollView contentContainerStyle={{flexGrow: 1}}>
+      <ScrollView
+        contentContainerStyle={{flexGrow: 1}}
+        showsVerticalScrollIndicator={false}>
         <View
           style={{
             height: 250,
@@ -50,6 +52,7 @@ const App = (props) => {
             width: '90%',
             alignSelf: 'center',
             flex: 1,
+            marginBottom: 50,
             // backgroundColor: 'red',
           }}>
           <View
@@ -71,7 +74,7 @@ const App = (props) => {
             <Text
               style={{
                 fontSize: 12,
-                color: '#6c6c6c',
+                color: 'black',
                 textAlign: 'center',
                 paddingTop: 5,
                 marginBottom: 20,
@@ -82,7 +85,7 @@ const App = (props) => {
 
           <Text
             style={{
-              color: '#6c6c6c',
+              color: 'black',
 
               fontSize: 12,
               marginBottom: 3,
@@ -171,7 +174,7 @@ const App = (props) => {
 
           <Text
             style={{
-              color: '#6c6c6c',
+              color: 'black',
 
               fontSize: 12,
               marginTop: 20,
@@ -261,7 +264,7 @@ const App = (props) => {
 
           <Text
             style={{
-              color: '#6c6c6c',
+              color: 'black',
 
               fontSize: 12,
               marginTop: 20,
@@ -322,26 +325,15 @@ const App = (props) => {
             onPress={() => SignupB()}
             buttonStyle={{
               backgroundColor: '#ff235d',
-
-              borderColor: '#c83c59',
+              width: '100%',
               height: 50,
+              borderRadius: 8,
             }}
-            titleStyle={{
-              color: 'white',
-              fontSize: 12,
-
-              fontFamily: 'Montserrat-Regular',
-            }}
+            titleStyle={{fontSize: 15, letterSpacing: 1}}
             containerStyle={{
-              backgroundColor: '#ff235d',
-              width: '98%',
-              alignSelf: 'center',
-              justifyContent: 'center',
-              height: 50,
-              borderWidth: 1,
-              borderRadius: 5,
-              borderColor: '#c83c59',
               marginVertical: 20,
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           />
         </View>

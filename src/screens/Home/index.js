@@ -65,34 +65,27 @@ const App = (props) => {
   const [slider1, setSlider1] = useState([
     {
       image: require('../../assets/icons/34.png'),
-      title: 'Grand coverage of $50000 at a basic premium as low as PKR 2700/-',
+      title:
+        'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
     },
+
     {
       image: require('../../assets/icons/34.png'),
-      title: 'Grand coverage of $50000 at a basic premium as low as PKR 2700/-',
+      title:
+        'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
     },
+
     {
       image: require('../../assets/icons/34.png'),
-      // title: 'Grand coverage of $50000 at a basic premium as low as PKR 2700/-',
-      title: 'Grand coverage of $50000 at a basic premium as low as PKR 2700/-',
+      title:
+        'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
     },
+
     {
       image: require('../../assets/icons/34.png'),
-      // title: 'Grand coverage of $50000 at a basic premium as low as PKR 2700/-',
-      title: 'Grand coverage of $50000 at a basic premium as low as PKR 2700/-',
+      title:
+        'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
     },
-    // {
-    //   image: require('../../assets/icons/uic.png'),
-    // },
-    // {
-    //   image: require('../../assets/icons/jubilee.png'),
-    // },
-    // {
-    //   image: require('../../assets/icons/adamjee.png'),
-    // },
-    // {
-    //   image: require('../../assets/icons/uic.png'),
-    // },
   ]);
 
   const [slider2, setSlider2] = useState([
@@ -128,67 +121,88 @@ const App = (props) => {
         style={{
           height: 250,
           // width: '100%',
-          alignItems: 'center',
-          justifyContent: 'center',
+          // alignItems: 'center',
+          // justifyContent: 'center',
+          // borderWidth: 1,
+          width: '95%',
+          alignSelf: 'center',
+          borderRadius: 10,
+          overflow: 'hidden',
+          elevation: 2,
+          backgroundColor: 'white',
         }}>
-        <ImageBackground
-          source={item.image}
-          style={{height: '100%', width: '100%', justifyContent: 'center'}}
-          resizeMode="cover">
-          <View
+        <View>
+          <ImageBackground
+            source={item.image}
             style={{
-              height: '60%',
-              // borderWidth: 1,
-              justifyContent: 'space-between',
-              flexDirection: 'row',
-              paddingHorizontal: 15,
-            }}>
-            <TouchableOpacity
+              height: '100%',
+              width: '100%',
+              // justifyContent: 'center',
+              borderRadius: 10,
+            }}
+            resizeMode="cover">
+            <View
               style={{
-                height: '100%',
-                width: 30,
-                // borderWidth: 1,
-                // backgroundColor: 'red',
+                flex: 0.7,
+                justifyContent: 'space-between',
+                flexDirection: 'row',
                 alignItems: 'center',
-                justifyContent: 'center',
-              }}
-              onPress={() => _carousel.snapToPrev()}>
-              <Image
-                source={require('../../assets/assets/32.png')}
-                style={{
-                  height: 15,
-                  width: 15,
-                }}
-                resizeMode="contain"
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{
-                height: '100%',
-                width: 30,
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-              onPress={() => _carousel.snapToNext()}>
-              <Image
-                source={require('../../assets/assets/33.png')}
-                style={{height: 15, width: 15}}
-                resizeMode="contain"
-              />
-            </TouchableOpacity>
-          </View>
-
-          <View style={{paddingHorizontal: 20, alignItems: 'center'}}>
-            <Text
-              style={{
-                color: 'white',
-
-                fontFamily: 'Montserrat-Medium',
+                // paddingHorizontal: 15,
               }}>
-              {item.title}
-            </Text>
-          </View>
-        </ImageBackground>
+              <TouchableOpacity
+                style={{
+                  height: '100%',
+                  width: 30,
+
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                onPress={() => _carousel.snapToPrev()}>
+                <Image
+                  source={require('../../assets/assets/32.png')}
+                  style={{
+                    height: 15,
+                    width: 15,
+                  }}
+                  resizeMode="contain"
+                />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  height: '100%',
+                  width: 30,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                onPress={() => _carousel.snapToNext()}>
+                <Image
+                  source={require('../../assets/assets/33.png')}
+                  style={{height: 15, width: 15}}
+                  resizeMode="contain"
+                />
+              </TouchableOpacity>
+            </View>
+
+            <View
+              style={{
+                flex: 0.3,
+                borderWidth: 0,
+                alignItems: 'center',
+                justifyContent: 'center',
+                paddingHorizontal: 10,
+              }}>
+              <Text
+                style={{
+                  color: 'white',
+
+                  fontFamily: 'Montserrat-Medium',
+                  // fontSize: 12,
+                }}>
+                {item.title}
+              </Text>
+            </View>
+          </ImageBackground>
+        </View>
       </View>
     );
   };
@@ -198,10 +212,6 @@ const App = (props) => {
       <View
         style={{
           height: 250,
-          // width: '100%',
-          // alignItems: 'center',
-          // justifyContent: 'center',
-          // backgroundColor: 'red',
         }}>
         <ImageBackground
           source={item.image}
@@ -221,8 +231,7 @@ const App = (props) => {
               style={{
                 height: '100%',
                 width: 30,
-                // borderWidth: 1,
-                // backgroundColor: 'red',
+
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
@@ -257,8 +266,8 @@ const App = (props) => {
               color: 'black',
 
               fontFamily: 'Montserrat-Medium',
-              marginLeft: 10,
-              marginBottom: 2,
+              marginLeft: 20,
+              marginBottom: 10,
             }}>
             {item.title}
           </Text>
@@ -283,15 +292,19 @@ const App = (props) => {
           // justifyContent: 'center',
           alignItems: 'flex-end',
         }}>
-        <TouchableOpacity onPress={() => props.navigation.openDrawer()}>
-          <FontAwesome
-            name="bars"
-            size={23}
-            style={{marginLeft: 10}}
-            color="white"
-            // style={{
-            //   alignItems: 'flex-end',
-            // }}
+        <TouchableOpacity
+          onPress={() => props.navigation.openDrawer()}
+          style={{
+            width: '14%',
+
+            alignItems: 'center',
+            justifyContent: 'center',
+            // borderWidth: 1,
+          }}>
+          <Image
+            source={require('../../assets/icons/icons/menu.png')}
+            style={{height: 20, width: 20}}
+            resizeMode="contain"
           />
         </TouchableOpacity>
         <View
@@ -373,7 +386,7 @@ const App = (props) => {
           />
         </View>
 
-        <View style={{width: '90%', alignSelf: 'center'}}>
+        <View style={{width: '100%', alignSelf: 'center'}}>
           {/* ==========Our Products========== */}
 
           <View
@@ -395,8 +408,7 @@ const App = (props) => {
           <View
             style={{
               flexDirection: 'row',
-              // justifyContent: 'space-evenly',
-              // marginVertical: 5,
+
               width: '100%',
               flexWrap: 'wrap',
               alignItems: 'center',
@@ -407,7 +419,8 @@ const App = (props) => {
                 <TouchableOpacity
                   style={{
                     height: 90,
-                    width: '49%',
+                    width: '50%',
+                    // borderWidth: 1,
                     // justifyContent: 'center',
                     // backgroundColor: 'red',
                   }}
@@ -418,7 +431,7 @@ const App = (props) => {
                   <Image
                     source={item.image}
                     style={{height: '100%', width: '100%'}}
-                    resizeMode="stretch"
+                    resizeMode="contain"
                   />
                 </TouchableOpacity>
               );
@@ -427,7 +440,7 @@ const App = (props) => {
 
           {/* ==========Companies========== */}
 
-          <View style={{alignItems: 'center', marginTop: 14}}>
+          <View style={{alignItems: 'center', marginTop: 14, marginBottom: 10}}>
             <Text
               style={{
                 color: '#ff3c6c',
@@ -444,6 +457,7 @@ const App = (props) => {
           <View
             style={{
               flexDirection: 'row',
+              width: '100%',
             }}>
             <ScrollView
               horizontal={true}
@@ -476,12 +490,18 @@ const App = (props) => {
               style={{
                 color: '#ff3c6c',
                 fontFamily: 'FredokaOne-Regular',
-                fontSize: 17,
+                fontSize: 20,
               }}>
               Articles
             </Text>
           </View>
-
+          {/* <View
+            style={{
+              width: '90%',
+              borderWidth: 1,
+              alignSelf: 'center',
+              overflow: 'hidden',
+            }}> */}
           <Carousel
             ref={(c) => {
               _carousel = c;
@@ -492,19 +512,25 @@ const App = (props) => {
             itemWidth={screenWidth}
             // sliderHeight={screenWidth}
             layout={'default'}
-            containerCustomStyle={{flex: 1, alignSelf: 'center'}}
-            slideStyle={{flex: 1}}
+            // containerCustomStyle={{flex: 1, alignSelf: 'center'}}
+            // slideStyle={{flex: 1}}
             style={{alignSelf: 'center'}}
           />
+          {/* </View> */}
 
           <View
             style={{
               alignItems: 'center',
-              marginVertical: 9,
+              marginVertical: 8,
               justifyContent: 'center',
             }}>
-            <Text style={{color: '#ff3c6c', fontFamily: 'FredokaOne-Regular'}}>
-              Videos
+            <Text
+              style={{
+                color: '#ff3c6c',
+                fontFamily: 'FredokaOne-Regular',
+                fontSize: 20,
+              }}>
+              Vidoes
             </Text>
           </View>
           <Carousel
@@ -525,7 +551,7 @@ const App = (props) => {
             style={{alignSelf: 'center'}}
           />
         </View>
-        <View style={{height: 40}}></View>
+        <View style={{height: 70}}></View>
       </ImageBackground>
     </ScrollView>
   );

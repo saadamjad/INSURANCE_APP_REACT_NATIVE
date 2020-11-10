@@ -48,7 +48,7 @@ function MyDrawer() {
 }
 function AuthStack() {
   return (
-    <Stack.Navigator initialRouteName="login">
+    <Stack.Navigator>
       <Stack.Screen
         name="splash"
         component={splash}

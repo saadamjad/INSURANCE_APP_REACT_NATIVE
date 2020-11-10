@@ -1,28 +1,3 @@
-// /**
-//  * Sample React Native App
-//  * https://github.com/facebook/react-native
-//  *
-//  * @format
-//  * @flow strict-local
-//  */
-
-// import React from 'react';
-
-// const App = (props) => {
-
-//   return <Stack navigation={props.navigation} />;
-// };
-
-// export default App;
-
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import 'react-native-gesture-handler';
 import React from 'react';
 import {ImageBackground, Text, View, Image} from 'react-native';
@@ -36,7 +11,6 @@ export default class App extends React.PureComponent {
   };
 
   componentDidMount() {
-    // let fontName = 'FredokaOne-Regular';
     let fontName = 'Montserrat-Light';
     GlobalFont.applyGlobal(fontName);
 

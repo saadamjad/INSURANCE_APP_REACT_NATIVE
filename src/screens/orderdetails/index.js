@@ -121,25 +121,20 @@ const App = (props) => {
             anything.
           </Text>
         </View>
-        {/* ==========Button========== */}
 
         <Button
           title="VISIT WEBSITE"
           onPress={() => props.navigation.navigate('HomeScreen')}
           buttonStyle={{
             backgroundColor: '#ff235d',
-            width: '85%',
+            width: '90%',
             height: 50,
-            borderRadius: 10,
-            marginBottom: 24,
+            borderRadius: 8,
+            marginBottom: 60,
+            marginTop: 50,
           }}
-          titleStyle={{
-            fontSize: 12,
-
-            fontFamily: 'Montserrat-Regular',
-          }}
+          titleStyle={{fontSize: 15, letterSpacing: 1}}
           containerStyle={{
-            marginVertical: 20,
             alignItems: 'center',
             justifyContent: 'center',
           }}

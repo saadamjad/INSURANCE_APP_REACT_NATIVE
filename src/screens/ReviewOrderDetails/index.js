@@ -271,14 +271,54 @@ const App = (props) => {
         <View
           style={{
             flexDirection: 'row',
-            justifyContent: 'space-evenly',
-            width: '80%',
-            alignSelf: 'center',
+            // justifyContent: 'space-evenly',
+            width: '90%',
+            marginBottom: 60,
+            marginTop: 40,
+            paddingHorizontal: 10,
             // marginVertical: 80,
             // borderWidth: 1,
-            paddingVertical: 50,
+            alignSelf: 'center',
           }}>
-          <TouchableOpacity
+          <View style={{flex: 0.5, borderWidth: 0, justifyContent: 'center'}}>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+              }}>
+              <Text
+                style={{
+                  color: '#ff4270',
+                  textAlign: 'center',
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
+                EDIT INFO
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={{flex: 0.5, borderWidth: 0, justifyContent: 'center'}}>
+            <Button
+              title="PAYMENT"
+              onPress={() => props.navigation.navigate('orderconfirmed')}
+              buttonStyle={{
+                backgroundColor: '#ff235d',
+                width: '90%',
+                height: 50,
+                borderRadius: 8,
+              }}
+              titleStyle={{
+                fontSize: 15,
+              }}
+              containerStyle={
+                {
+                  // alignItems: 'center',
+                  // justifyContent: 'center',
+                }
+              }
+            />
+          </View>
+
+          {/* <TouchableOpacity
             style={{
               width: 120,
               height: 45,
@@ -312,7 +352,7 @@ const App = (props) => {
               alignItems: 'center',
               justifyContent: 'center',
             }}
-          />
+          /> */}
         </View>
       </ScrollView>
     </SafeAreaView>

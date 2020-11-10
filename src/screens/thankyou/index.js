@@ -81,7 +81,14 @@ const App = (props) => {
               width: '80%',
               alignSelf: 'center',
             }}>
-            <Text style={{color: '#a6a6a6', fontSize: 12, textAlign: 'center'}}>
+            <Text
+              style={{
+                color: 'black',
+                fontSize: 12,
+                textAlign: 'center',
+
+                fontFamily: 'Montserrat-Regular',
+              }}>
               Thank you for your order. we will contact you soon
             </Text>
           </View>
@@ -91,7 +98,7 @@ const App = (props) => {
               style={{
                 color: '#ff396b',
 
-                // fontFamily: 'FredokaOne-Regular',
+                fontFamily: 'Montserrat-Bold',
 
                 fontSize: 15,
                 marginVertical: 10,
@@ -125,54 +132,102 @@ const App = (props) => {
                   backgroundColor: 'white',
                 }}
                 onPress={() => props.navigation.navigate('visitwebsite')}>
-                <Text style={{fontSize: 13, marginBottom: 5, color: 'black'}}>
+                <Text
+                  style={{
+                    fontSize: 13,
+                    marginBottom: 5,
+                    color: 'black',
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Personal Details
                 </Text>
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Name:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text
+                    style={{
+                      color: 'black',
+                      fontSize: 12,
+
+                      // fontFamily: 'Montserrat-Regular',
+                    }}>
                     {item.name}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Gender:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.gender}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Contact number:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.contactNumber}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   CNIC:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.cnic}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Passport number:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.passportNumber}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Email:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.email}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Address:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.address}
                   </Text>
                 </Text>
@@ -184,7 +239,8 @@ const App = (props) => {
 
           {benificiary.map((item, i) => {
             return (
-              <View
+              <TouchableOpacity
+                onPress={() => props.navigation.navigate('visitwebsite')}
                 key={i}
                 style={{
                   width: '100%',
@@ -204,30 +260,51 @@ const App = (props) => {
 
                   marginVertical: 10,
                 }}>
-                <Text style={{color: 'black', fontSize: 13, marginBottom: 5}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 13,
+                    marginBottom: 5,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Benificiary Details
                 </Text>
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Benificiary Name:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.benificiaryName}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Contact number:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 1}}>
                     {item.contactNbr}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   RelationShip:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.relationship}
                   </Text>
                 </Text>
-              </View>
+              </TouchableOpacity>
             );
           })}
 
@@ -235,7 +312,8 @@ const App = (props) => {
 
           {travel.map((item, i) => {
             return (
-              <View
+              <TouchableOpacity
+                onPress={() => props.navigation.navigate('visitwebsite')}
                 key={i}
                 style={{
                   width: '100%',
@@ -255,37 +333,67 @@ const App = (props) => {
                   borderRadius: 5,
                   backgroundColor: 'white',
                 }}>
-                <Text style={{color: 'black', fontSize: 13, marginBottom: 5}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontFamily: 'Montserrat-Regular',
+                    fontSize: 13,
+                    marginBottom: 5,
+                  }}>
                   Travel Details
                 </Text>
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Travel from:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.travelFrom}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Travel to:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.travelTo}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Departure City:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.departureCity}
                   </Text>
                 </Text>
 
-                <Text style={{color: '#ff396b', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: '#ff396b',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   Arrival Country:{' '}
-                  <Text style={{color: '#989898', fontSize: 12}}>
+                  <Text style={{color: 'black', fontSize: 12}}>
                     {item.arrivalCountry}
                   </Text>
                 </Text>
-              </View>
+              </TouchableOpacity>
             );
           })}
         </View>

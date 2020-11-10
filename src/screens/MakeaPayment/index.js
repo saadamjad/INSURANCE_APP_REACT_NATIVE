@@ -22,7 +22,7 @@ const App = (props) => {
       style={{flex: 1, backgroundColor: 'white'}}
       showsVerticalScrollIndicator={false}
       contentContainerStyle={{flexGrow: 1}}>
-      <View style={{width: '90%', alignSelf: 'center', marginBottom: 40}}>
+      <View style={{width: '90%', alignSelf: 'center', marginBottom: 80}}>
         <View style={{alignItems: 'center', marginVertical: 10}}>
           <Text
             style={{
@@ -30,7 +30,8 @@ const App = (props) => {
 
               fontFamily: 'FredokaOne-Regular',
 
-              fontSize: 16,
+              fontSize: 19,
+              marginVertical: 8,
             }}>
             Make a Payment
           </Text>
@@ -161,9 +162,9 @@ const App = (props) => {
 
             <Text
               style={{
-                color: '#9a9a9a',
+                color: 'black',
                 fontSize: 12,
-                marginTop: 20,
+                marginTop: 10,
                 marginBottom: 3,
               }}>
               {' '}
@@ -190,7 +191,7 @@ const App = (props) => {
 
             <Text
               style={{
-                color: '#9a9a9a',
+                color: 'black',
                 fontSize: 12,
                 marginTop: 20,
                 marginBottom: 3,
@@ -226,22 +227,22 @@ const App = (props) => {
               }}>
               <Image
                 source={require('../../assets/icons/card1.png')}
-                style={{height: 20, width: 20, marginRight: 5}}
+                style={{height: 30, width: 30, marginRight: 10}}
                 resizeMode="contain"
               />
               <Image
                 source={require('../../assets/icons/card2.png')}
-                style={{height: 20, width: 20, marginRight: 5}}
+                style={{height: 30, width: 30, marginRight: 10}}
                 resizeMode="contain"
               />
               <Image
                 source={require('../../assets/icons/card3.png')}
-                style={{height: 20, width: 20, marginRight: 5}}
+                style={{height: 30, width: 30, marginRight: 10}}
                 resizeMode="contain"
               />
               <Image
                 source={require('../../assets/icons/card4.png')}
-                style={{height: 20, width: 20, marginRight: 5}}
+                style={{height: 30, width: 30, marginRight: 10}}
                 resizeMode="contain"
               />
             </View>
@@ -250,7 +251,7 @@ const App = (props) => {
               <View style={{width: '45%'}}>
                 <Text
                   style={{
-                    color: '#9a9a9a',
+                    color: 'black',
                     fontSize: 12,
                     marginTop: 10,
                     marginBottom: 3,
@@ -274,6 +275,7 @@ const App = (props) => {
                       marginLeft: 5,
                       fontSize: 10,
                     }}
+                    placeholderTextColor="black"
                     placeholder="MM/YY"
                     con
                   />
@@ -283,7 +285,7 @@ const App = (props) => {
               <View style={{width: '45%'}}>
                 <Text
                   style={{
-                    color: '#9a9a9a',
+                    color: 'black',
                     marginBottom: 3,
                     fontSize: 12,
                     marginTop: 10,
@@ -306,6 +308,7 @@ const App = (props) => {
                       marginLeft: 5,
                       fontSize: 10,
                     }}
+                    placeholderTextColor="black"
                     placeholder="XXXX"
                   />
                 </View>
@@ -315,13 +318,12 @@ const App = (props) => {
 
             <Button
               title="MAKE PAYMENT"
-              // onPress={() => ()}
               onPress={() => hireNowFunction()}
               buttonStyle={{
                 backgroundColor: '#ff235d',
-                width: 245,
+                width: '100%',
                 height: 50,
-                borderRadius: 5,
+                borderRadius: 8,
               }}
               titleStyle={{fontSize: 12, letterSpacing: 1}}
               containerStyle={{
@@ -335,20 +337,22 @@ const App = (props) => {
             <View
               style={{
                 backgroundColor: '#fff3f6',
-                width: '65%',
+                // width: '50%',
+                paddingHorizontal: 5,
                 alignSelf: 'center',
-                borderRadius: 10,
+                borderRadius: 7,
                 marginTop: 10,
-                marginBottom: 50,
+                marginBottom: 35,
               }}>
               <View
                 style={{
                   flexDirection: 'row',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginVertical: 10,
+                  // marginVertical: 10,
+                  paddingVertical: 5,
                 }}>
-                <View style={{width: 10, height: 10}}>
+                <View style={{width: 20, height: 15}}>
                   <Image
                     source={require('../../assets/icons/lock.png')}
                     style={{
@@ -363,9 +367,8 @@ const App = (props) => {
                   style={{
                     color: '#4cb77a',
                     fontSize: 11,
-                    // letterSpacing: 0.25,
                     marginLeft: 3,
-                    // fontWeight: 'bold',
+                    fontFamily: 'Montserrat-Bold',
                   }}>
                   YOUR DATA IS SECURED
                 </Text>

@@ -53,6 +53,7 @@ export default ({state, descriptors, navigation}) => {
         <Image
           style={{width: 70, height: 70, marginTop: -40}}
           source={require('../assets/icons/42.png')}
+          resizeMode="contain"
         />
       ),
     },

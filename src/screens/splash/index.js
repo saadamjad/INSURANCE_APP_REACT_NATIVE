@@ -12,36 +12,36 @@ import {
 
 const image1 = (
   <Image
-    source={require('../../assets/assets/three.png')}
-    style={{height: '80%', width: '80%'}}
+    source={require('../../assets/icons/icons/1.png')}
+    style={{height: '100%', width: '100%'}}
     resizeMode="contain"
   />
 );
 const image2 = (
   <Image
-    source={require('../../assets/icons/5.png')}
+    source={require('../../assets/icons/icons/2.png')}
     style={{height: '100%', width: '100%'}}
     resizeMode="contain"
   />
 );
 const image3 = (
   <Image
-    source={require('../../assets/icons/6.png')}
+    source={require('../../assets/icons/icons/3.png')}
     style={{height: '100%', width: '100%'}}
     resizeMode="contain"
   />
 );
 const image4 = (
   <Image
-    source={require('../../assets/assets/second.png')}
-    style={{height: '80%', width: '90%'}}
+    source={require('../../assets/icons/icons/4.png')}
+    style={{height: '100%', width: '100%'}}
     resizeMode="contain"
   />
 );
 const image5 = (
   <Image
-    source={require('../../assets/icons/8.png')}
-    style={{height: '100%', width: '90%'}}
+    source={require('../../assets/icons/icons/5.png')}
+    style={{height: '100%', width: '100%'}}
     resizeMode="contain"
   />
 );

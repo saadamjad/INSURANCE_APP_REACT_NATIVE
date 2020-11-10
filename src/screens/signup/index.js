@@ -48,7 +48,7 @@ const App = (props) => {
             style={{
               fontSize: 12,
               fontWeight: '100',
-              color: '#727272',
+              color: 'black',
               textAlign: 'center',
               marginTop: 5,
             }}>
@@ -63,7 +63,15 @@ const App = (props) => {
             height: 50,
             marginTop: 20,
           }}>
-          <Text style={{color: '#858585', fontSize: 12}}> Name </Text>
+          <Text
+            style={{
+              color: 'black',
+              fontSize: 12,
+              marginBottom: 5,
+            }}>
+            {' '}
+            Name{' '}
+          </Text>
           <View
             style={{
               flexDirection: 'row',
@@ -93,7 +101,10 @@ const App = (props) => {
             height: 50,
             marginTop: 20,
           }}>
-          <Text style={{color: '#858585', fontSize: 12}}> Email </Text>
+          <Text style={{color: 'black', fontSize: 12, marginBottom: 5}}>
+            {' '}
+            Email{' '}
+          </Text>
           <View
             style={{
               flexDirection: 'row',
@@ -121,7 +132,10 @@ const App = (props) => {
             height: 50,
             marginTop: 20,
           }}>
-          <Text style={{color: '#858585', fontSize: 12}}> Contact Number </Text>
+          <Text style={{color: 'black', fontSize: 12, marginBottom: 5}}>
+            {' '}
+            Contact Number{' '}
+          </Text>
           <View
             style={{
               flexDirection: 'row',
@@ -149,7 +163,10 @@ const App = (props) => {
             height: 50,
             marginTop: 20,
           }}>
-          <Text style={{color: '#858585', fontSize: 12}}> Password </Text>
+          <Text style={{color: 'black', fontSize: 12, marginBottom: 5}}>
+            {' '}
+            Password{' '}
+          </Text>
           <View
             style={{
               flexDirection: 'row',
@@ -177,7 +194,7 @@ const App = (props) => {
             height: 50,
             marginTop: 20,
           }}>
-          <Text style={{color: '#858585', fontSize: 12}}>
+          <Text style={{color: 'black', fontSize: 12, marginBottom: 5}}>
             {' '}
             Confirm Password
           </Text>
@@ -191,6 +208,7 @@ const App = (props) => {
               height: 45,
               alignItems: 'center',
               paddingLeft: 10,
+              marginBottom: 20,
             }}>
             <Image
               source={require('../../assets/icons/11.png')}
@@ -203,27 +221,22 @@ const App = (props) => {
             title="SIGN UP"
             onPress={() => SignupB()}
             buttonStyle={{
-              backgroundColor: '#ff235d',
-              height: 50,
+              width: '100%',
 
-              borderColor: '#ff235d',
+              height: 50,
+              borderWidth: 2,
+              borderRadius: 6,
+              borderColor: '#fe4270',
+              backgroundColor: '#fe4270',
             }}
             titleStyle={{
+              fontSize: 15,
               color: 'white',
-              fontSize: 12,
-
               fontFamily: 'Montserrat-Regular',
             }}
             containerStyle={{
-              backgroundColor: '#ff235d',
-              width: '98%',
-              alignSelf: 'center',
+              alignItems: 'center',
               justifyContent: 'center',
-              height: 50,
-              borderWidth: 1,
-              borderRadius: 5,
-              borderColor: '#ff235d',
-              marginVertical: 10,
             }}
           />
         </View>

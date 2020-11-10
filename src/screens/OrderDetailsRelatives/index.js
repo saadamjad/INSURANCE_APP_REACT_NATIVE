@@ -50,11 +50,11 @@ const App = (props) => {
       contentContainerStyle={{flexGrow: 1}}
       style={{backgroundColor: 'white'}}
       showsVerticalScrollIndicator={false}>
-      <View style={{flex: 1, backgroundColor: 'white'}}>
+      <View style={{flex: 1, backgroundColor: 'white', marginBottom: 50}}>
         <View
           style={{
             alignItems: 'center',
-            paddingVertical: 10,
+            paddingVertical: 15,
           }}>
           <Text
             style={{
@@ -64,24 +64,26 @@ const App = (props) => {
 
               color: '#ff235d',
             }}>
-            Order Details
+            Order Detail
           </Text>
           <View
             style={{
               backgroundColor: '#fff3f6',
               width: '50%',
               alignSelf: 'center',
-              borderRadius: 10,
+              borderRadius: 5,
               marginTop: 10,
+              marginBottom: 25,
             }}>
             <View
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginVertical: 10,
+                // marginVertical: 10,
+                paddingVertical: 5,
               }}>
-              <View style={{width: 15, height: 10}}>
+              <View style={{width: 20, height: 15}}>
                 <Image
                   source={require('../../assets/icons/lock.png')}
                   style={{
@@ -97,6 +99,7 @@ const App = (props) => {
                   color: '#4cb77a',
                   fontSize: 11,
                   marginLeft: 3,
+                  fontFamily: 'Montserrat-Bold',
                 }}>
                 YOUR DATA IS SECURED
               </Text>
@@ -129,7 +132,7 @@ const App = (props) => {
               color: 'black',
               marginLeft: 5,
 
-              fontFamily: 'Montserrat-Medium',
+              fontFamily: 'Montserrat-Regular',
             }}>
             {' '}
             Personal Details{' '}
@@ -156,7 +159,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
           <View
@@ -179,11 +182,15 @@ const App = (props) => {
                 width: '100%',
                 height: 45,
                 alignItems: 'center',
+                paddingHorizontal: 7,
               }}
               onPress={() => setShow(!show)}>
-              <Text style={{width: '90%', borderWidth: 0, fontSize: 12}}>
-                {' '}
-                {selectGender}{' '}
+              <Text
+                style={{
+                  width: '90%',
+                  fontSize: 15,
+                }}>
+                {selectGender}
               </Text>
               <Image
                 source={require('../../assets/icons/52.png')}
@@ -212,6 +219,7 @@ const App = (props) => {
                       style={{
                         paddingVertical: 10,
                         borderBottomWidth: 0.1,
+                        fontSize: 15,
                       }}
                       onPress={() => {
                         setGendertype(item.type);
@@ -246,7 +254,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
 
@@ -271,7 +279,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
 
@@ -296,7 +304,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
           <View
@@ -320,7 +328,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
 
@@ -345,7 +353,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
 
@@ -370,7 +378,7 @@ const App = (props) => {
                 height: 85,
                 // alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
         </View>
@@ -401,7 +409,7 @@ const App = (props) => {
               color: 'black',
               marginLeft: 5,
 
-              fontFamily: 'Montserrat-Medium',
+              fontFamily: 'Montserrat-Regular',
             }}>
             {' '}
             Travel Details{' '}
@@ -483,13 +491,13 @@ const App = (props) => {
                 width: '100%',
                 height: 45,
                 alignItems: 'center',
+                paddingHorizontal: 7,
               }}
               onPress={() => {
                 setShow(!show);
               }}>
-              <Text style={{width: '90%', borderWidth: 0, fontSize: 12}}>
-                {' '}
-                {selectTravel}{' '}
+              <Text style={{width: '90%', borderWidth: 0, fontSize: 15}}>
+                {selectTravel}
               </Text>
               <Image
                 source={require('../../assets/icons/52.png')}
@@ -518,6 +526,7 @@ const App = (props) => {
                       style={{
                         paddingVertical: 10,
                         borderBottomWidth: 0.1,
+                        fontSize: 15,
                       }}
                       onPress={() => {
                         setGendertype(item.type);
@@ -552,7 +561,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
 
@@ -577,7 +586,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
 
@@ -602,7 +611,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
         </View>
@@ -632,7 +641,7 @@ const App = (props) => {
             style={{
               color: 'black',
               marginLeft: 5,
-              fontFamily: 'Montserrat-Medium',
+              fontFamily: 'Montserrat-Regular',
             }}>
             {' '}
             Benificiary Details{' '}
@@ -659,7 +668,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
           <View
@@ -707,7 +716,7 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
 
@@ -732,11 +741,11 @@ const App = (props) => {
                 height: 45,
                 alignItems: 'center',
               }}>
-              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+              <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
             </View>
           </View>
         </View>
-        <Button
+        {/* <Button
           title="SUBMIT & REVIEW"
           // onPress={() => ()}
           onPress={() => props.navigation.navigate('MakeaPayment')}
@@ -746,6 +755,22 @@ const App = (props) => {
             alignSelf: 'center',
             height: 50,
             borderRadius: 10,
+          }}
+          titleStyle={{fontSize: 12, letterSpacing: 1}}
+          containerStyle={{
+            marginVertical: 20,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        /> */}
+        <Button
+          title="SUBMIT & REVIEW"
+          onPress={() => props.navigation.navigate('MakeaPayment')}
+          buttonStyle={{
+            backgroundColor: '#ff235d',
+            width: '74%',
+            height: 50,
+            borderRadius: 8,
           }}
           titleStyle={{fontSize: 12, letterSpacing: 1}}
           containerStyle={{
