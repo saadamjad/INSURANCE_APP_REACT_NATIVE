@@ -15,13 +15,13 @@ import signup from '../screens/signup';
 import loginpage from '../screens/login_Page';
 import revieworderdetails from '../screens/ReviewOrderDetails';
 import insurancepolicies from '../screens/InsurancePolicies';
-import calling from '../screens/calling';
-import travelinsuranceform from '../screens/hire someone';
-import revieworder from '../screens/hire_someones_profile';
+import OurProducts from '../screens/OurProducts';
+import TravelInsurance from '../screens/TravelInsurance';
+import MakeaPayment from '../screens/MakeaPayment';
 import orderdetailsinsurance from '../screens/share_UGGLAN';
 import visitwebsite from '../screens/orderdetails';
 import splash from '../screens/splash';
-import hireProfile from '../screens/hire_someones_profile';
+// import hireProfile from '../screens/MakeaPayment';
 import orderconfirmed from '../screens/thankyou';
 import Home from '../screens/Home';
 
@@ -94,8 +94,8 @@ function HomeStack() {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="travelinsuranceform"
-        component={travelinsuranceform}
+        name="TravelInsurance"
+        component={TravelInsurance}
         options={{headerShown: false}}
       />
       <Stack.Screen
@@ -105,8 +105,8 @@ function HomeStack() {
       />
 
       <Stack.Screen
-        name="insurancepoliciesform"
-        component={calling} //
+        name="OurProducts"
+        component={OurProducts} //
         options={{headerShown: false}}
       />
       <Stack.Screen
@@ -116,8 +116,8 @@ function HomeStack() {
       />
 
       <Stack.Screen
-        name="revieworder"
-        component={revieworder} //
+        name="MakeaPayment"
+        component={MakeaPayment} //
         options={{headerShown: false}}
       />
       <Stack.Screen
@@ -160,16 +160,16 @@ function MainStack() {
       />
 
       <Stack.Screen
-        name="calling"
-        component={calling} //
+        name="OurProducts"
+        component={OurProducts} //
         options={{headerShown: false}}
       />
 
-      <Stack.Screen
+      {/* <Stack.Screen
         name="hireProfile"
         component={hireProfile} //
         options={{headerShown: false}}
-      />
+      /> */}
       <Stack.Screen
         name="orderdetailsinsurance"
         component={orderdetailsinsurance} //

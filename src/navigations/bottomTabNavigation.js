@@ -1,7 +1,5 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
-import {Icon} from 'native-base';
-import LinearGradient from 'react-native-linear-gradient';
 
 const HomeIcon = require('../assets/icons/38.png');
 export default ({state, descriptors, navigation}) => {

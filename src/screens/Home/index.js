@@ -413,7 +413,7 @@ const App = (props) => {
                   }}
                   onPress={() =>
                     // props.navigation.navigate('insurancepolicies')
-                    props.navigation.navigate('insurancepoliciesform')
+                    props.navigation.navigate('OurProducts')
                   }>
                   <Image
                     source={item.image}

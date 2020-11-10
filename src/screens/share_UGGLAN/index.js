@@ -739,7 +739,7 @@ const App = (props) => {
         <Button
           title="SUBMIT & REVIEW"
           // onPress={() => ()}
-          onPress={() => props.navigation.navigate('revieworder')}
+          onPress={() => props.navigation.navigate('MakeaPayment')}
           buttonStyle={{
             backgroundColor: '#ff235d',
             width: '80%',

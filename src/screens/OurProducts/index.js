@@ -8,7 +8,6 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
 const App = (props) => {
@@ -28,7 +27,7 @@ const App = (props) => {
     },
   ]);
   const callingfunction = () => {
-    props.navigation.navigate('revieworder');
+    props.navigation.navigate('MakeaPayment');
   };
 
   return (
@@ -83,7 +82,7 @@ const App = (props) => {
                 // elevation: 5,
               }}
               // onPress={() => callingfunction()}
-              onPress={() => props.navigation.navigate('travelinsuranceform')}>
+              onPress={() => props.navigation.navigate('TravelInsurance')}>
               <Image
                 source={item.image}
                 style={{height: '100%', width: '100%', resizeMode: 'stretch'}}
