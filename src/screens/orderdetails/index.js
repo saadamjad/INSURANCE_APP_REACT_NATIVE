@@ -81,8 +81,9 @@ const App = (props) => {
               fontSize: 13,
               textAlign: 'center',
               lineHeight: 16,
+              fontFamily: 'Montserrat-Medium',
             }}>
-            Bsuiness Insurance Tailored {'\n'} to Your Needs
+            Business Insurance Tailored {'\n'} to Your Needs
           </Text>
         </View>
 
@@ -94,6 +95,7 @@ const App = (props) => {
               textAlign: 'center',
               // lineHeight: 15,
               // letterSpacing: 0.5,
+              fontFamily: 'Montserrat-Medium',
             }}>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
@@ -114,6 +116,7 @@ const App = (props) => {
               textAlign: 'center',
               lineHeight: 17,
               letterSpacing: 0.5,
+              fontFamily: 'Montserrat-Medium',
             }}>
             Various versions have evolved over the years, sometimes by accident,
             sometimes on purpose (injected humour and the like). If you are

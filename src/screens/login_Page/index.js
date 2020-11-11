@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Button} from 'react-native-elements';
 import {
   Text,
@@ -9,29 +9,33 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-// import AntDesign from 'react-native-vector-icons/AntDesign';
 import Zocial from 'react-native-vector-icons/Zocial';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Entypo from 'react-native-vector-icons/Entypo';
 const App = (props) => {
+  const [showPassword, setShowPassword] = useState(true);
+  const [password, setPassword] = useState('');
+
   const SignUp = () => {
     props.navigation.navigate('signup');
   };
   return (
-    <View style={{flex: 1, backgroundColor: 'white'}}>
-      <View style={{flex: 0.3, width: '100%'}}>
+    <ScrollView
+      contentContainerStyle={{flexGrow: 1}}
+      style={{backgroundColor: 'white'}}>
+      <View style={{height: '30%', width: '100%', borderWidth: 0}}>
         <Image
           source={require('../../assets/icons/10.png')}
           resizeMode={'stretch'}
           style={{height: '100%', width: '100%'}}
         />
       </View>
-      <View style={{flex: 0.7}}>
-        {/* ==========Description========== */}
+      <View style={{height: '60%'}}>
         <View
           style={{
             alignItems: 'center',
-            paddingVertical: 30,
-            width: '50%',
+            paddingVertical: 20,
+            // width: '50%',
             alignSelf: 'center',
           }}>
           <Text style={{fontSize: 20, fontFamily: 'FredokaOne-Regular'}}>
@@ -48,17 +52,13 @@ const App = (props) => {
             Log to see the insurance plans.
           </Text>
         </View>
-
         <View
           style={{
             width: '90%',
             alignSelf: 'center',
             height: 50,
           }}>
-          <Text style={{color: 'black', fontSize: 12, marginBottom: 5}}>
-            {' '}
-            Email{' '}
-          </Text>
+          <Text style={{color: 'black', marginBottom: 5}}> Email </Text>
           <View
             style={{
               flexDirection: 'row',
@@ -81,9 +81,12 @@ const App = (props) => {
               }}
             />
             <TextInput
-              keyboardType=""
-              placeholder=""
-              style={{width: '88%', marginLeft: 5, fontSize: 10}}
+              keyboardType="default"
+              style={{
+                flex: 1,
+                marginLeft: 5,
+                fontSize: 15,
+              }}
             />
           </View>
         </View>
@@ -95,8 +98,7 @@ const App = (props) => {
             marginTop: 30,
           }}>
           <Text style={{color: 'black', fontSize: 12, marginBottom: 5}}>
-            {' '}
-            Password{' '}
+            Password
           </Text>
           <View
             style={{
@@ -120,13 +122,33 @@ const App = (props) => {
               }}
             />
             <TextInput
-              keyboardType=""
-              placeholder=""
-              style={{width: '88%', marginLeft: 5, fontSize: 10}}
+              keyboardType="default"
+              secureTextEntry={showPassword}
+              style={{
+                flex: 1,
+                marginLeft: 5,
+                fontSize: 15,
+              }}
+              onChangeText={(password) => setPassword(password)}
             />
+            {password !== '' ? (
+              <TouchableOpacity
+                style={{
+                  width: '15%',
+                  // borderWidth: 1,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                onPress={() => setShowPassword(!showPassword)}>
+                <Entypo
+                  name={showPassword ? 'eye' : 'eye-with-line'}
+                  size={20}
+                  color="gray"
+                />
+              </TouchableOpacity>
+            ) : null}
           </View>
         </View>
-
         <View
           style={{
             width: '90%',
@@ -157,7 +179,6 @@ const App = (props) => {
             }}
           />
         </View>
-
         <Text
           style={{
             textAlign: 'center',
@@ -167,18 +188,13 @@ const App = (props) => {
           }}>
           or connect using
         </Text>
-
         <View
           style={{
             flexDirection: 'row',
-            // justifyContent: 'space-evenly',
             width: '90%',
             marginBottom: 10,
             marginTop: 10,
-            // paddingHorizontal: 10,
-            // marginVertical: 80,
-            // borderWidth: 1,
-            // justifyContent: 'space-between',
+
             alignSelf: 'center',
           }}>
           <View style={{flex: 0.5}}>
@@ -232,24 +248,38 @@ const App = (props) => {
             />
           </View>
         </View>
-
-        <Text
+        <View
           style={{
-            textAlign: 'center',
-            marginVertical: 13,
-            fontSize: 10,
-            color: 'black',
-            fontFamily: 'Montserrat-Regular',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}>
-          {' '}
-          Don't have an account?{' '}
-          <Text style={{color: '#ec2f57', fontFamily: 'Montserrat-Regular'}}>
-            {' '}
+          <Text
+            style={{
+              textAlign: 'center',
+              marginVertical: 13,
+              fontSize: 10,
+              color: 'black',
+              fontFamily: 'Montserrat-Regular',
+            }}>
+            Don't have an account?
+          </Text>
+          <Text
+            style={{
+              color: '#ec2f57',
+              fontFamily: 'Montserrat-Regular',
+              // borderWidth: 1,
+              padding: 10,
+              // height: 50,
+              // width: 100,
+              // backgroundColor: 'red',
+            }}
+            onPress={() => props.navigation.navigate('signup')}>
             Sign Up
-          </Text>{' '}
-        </Text>
+          </Text>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

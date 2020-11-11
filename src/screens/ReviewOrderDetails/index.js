@@ -90,51 +90,86 @@ const App = (props) => {
                 }}>
                 Personal Details
               </Text>
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Name:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
-                  {item.name}
-                </Text>
+                <Text style={{color: 'black', fontSize: 12}}>{item.name}</Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Gender:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text style={{color: 'black', fontSize: 12}}>
                   {item.gender}
                 </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Contact number:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text style={{color: 'black', fontSize: 12}}>
                   {item.contactNumber}
                 </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 CNIC:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
-                  {item.cnic}
-                </Text>
+                <Text style={{color: 'black', fontSize: 12}}>{item.cnic}</Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Passport number:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text style={{color: 'black', fontSize: 12}}>
                   {item.passportNumber}
                 </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Email:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
-                  {item.email}
-                </Text>
+                <Text style={{color: 'black', fontSize: 12}}>{item.email}</Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Address:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text style={{color: 'black', fontSize: 12}}>
                   {item.address}
                 </Text>
               </Text>
@@ -176,23 +211,59 @@ const App = (props) => {
                 }}>
                 Benificiary Details
               </Text>
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Benificiary Name:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   {item.benificiaryName}
                 </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Contact number:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   {item.contactNbr}
                 </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 RelationShip:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   {item.relationship}
                 </Text>
               </Text>
@@ -235,30 +306,78 @@ const App = (props) => {
                 }}>
                 Travel Details
               </Text>
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Travel from:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   {item.travelFrom}
                 </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Travel to:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   {item.travelTo}
                 </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Departure City:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   {item.departureCity}
                 </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Arrival Country:{' '}
-                <Text style={{color: '#909090', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   {item.arrivalCountry}
                 </Text>
               </Text>
@@ -301,7 +420,7 @@ const App = (props) => {
               title="PAYMENT"
               onPress={() => props.navigation.navigate('orderconfirmed')}
               buttonStyle={{
-                backgroundColor: '#ff235d',
+                backgroundColor: '#ff396b',
                 width: '90%',
                 height: 50,
                 borderRadius: 8,
@@ -340,7 +459,7 @@ const App = (props) => {
             title="PAYMENT"
             onPress={() => props.navigation.navigate('orderconfirmed')}
             buttonStyle={{
-              backgroundColor: '#ff235d',
+              backgroundColor: '#ff396b',
               width: 140,
               height: 50,
               borderRadius: 8,

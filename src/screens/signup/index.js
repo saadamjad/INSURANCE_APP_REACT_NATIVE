@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Button} from 'react-native-elements';
 import {
   Text,
@@ -7,10 +7,18 @@ import {
   SafeAreaView,
   TextInput,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 const App = (props) => {
+  const [showPassword, setShowPassword] = useState(true);
+  const [showPassword1, setShowPassword1] = useState(true);
+
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
   const SignupB = () => {
     props.navigation.navigate('mydrawer');
   };
@@ -90,7 +98,7 @@ const App = (props) => {
               style={{height: 15, width: 15}}
               resizeMode="contain"
             />
-            <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+            <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
           </View>
         </View>
 
@@ -121,7 +129,7 @@ const App = (props) => {
               style={{height: 15, width: 15}}
               resizeMode="contain"
             />
-            <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+            <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
           </View>
         </View>
 
@@ -152,7 +160,7 @@ const App = (props) => {
               style={{height: 15, width: 15}}
               resizeMode="contain"
             />
-            <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+            <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
           </View>
         </View>
 
@@ -167,7 +175,7 @@ const App = (props) => {
             {' '}
             Password{' '}
           </Text>
-          <View
+          {/* <View
             style={{
               flexDirection: 'row',
               borderWidth: 2,
@@ -183,7 +191,52 @@ const App = (props) => {
               style={{height: 15, width: 15}}
               resizeMode="contain"
             />
-            <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+            <TextInput style={{width: '88%', marginLeft: 5, fontSize: 15}} />
+          </View> */}
+          <View
+            style={{
+              flexDirection: 'row',
+              borderWidth: 2,
+              // borderColor: '#fe4270',
+              borderColor: '#fe4270',
+              paddingLeft: 10,
+
+              borderRadius: 8,
+              width: '100%',
+              height: 45,
+              alignItems: 'center',
+            }}>
+            <Image
+              source={require('../../assets/icons/11.png')}
+              style={{height: 15, width: 15}}
+              resizeMode="contain"
+            />
+            <TextInput
+              keyboardType="default"
+              secureTextEntry={showPassword}
+              style={{
+                flex: 1,
+                marginLeft: 5,
+                fontSize: 15,
+              }}
+              onChangeText={(password) => setPassword(password)}
+            />
+            {password !== '' ? (
+              <TouchableOpacity
+                style={{
+                  width: '15%',
+                  // borderWidth: 1,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                onPress={() => setShowPassword(!showPassword)}>
+                <Entypo
+                  name={showPassword ? 'eye' : 'eye-with-line'}
+                  size={20}
+                  color="gray"
+                />
+              </TouchableOpacity>
+            ) : null}
           </View>
         </View>
 
@@ -202,21 +255,48 @@ const App = (props) => {
             style={{
               flexDirection: 'row',
               borderWidth: 2,
+              // borderColor: '#fe4270',
               borderColor: '#fe4270',
+              paddingLeft: 10,
+
               borderRadius: 8,
               width: '100%',
               height: 45,
               alignItems: 'center',
-              paddingLeft: 10,
-              marginBottom: 20,
             }}>
             <Image
               source={require('../../assets/icons/11.png')}
               style={{height: 15, width: 15}}
               resizeMode="contain"
             />
-            <TextInput style={{width: '88%', marginLeft: 5, fontSize: 10}} />
+            <TextInput
+              keyboardType="default"
+              secureTextEntry={showPassword1}
+              style={{
+                flex: 1,
+                marginLeft: 5,
+                fontSize: 15,
+              }}
+              onChangeText={(password) => setConfirmPassword(password)}
+            />
+            {confirmPassword !== '' ? (
+              <TouchableOpacity
+                style={{
+                  width: '15%',
+                  // borderWidth: 1,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                onPress={() => setShowPassword1(!showPassword1)}>
+                <Entypo
+                  name={showPassword1 ? 'eye' : 'eye-with-line'}
+                  size={20}
+                  color="gray"
+                />
+              </TouchableOpacity>
+            ) : null}
           </View>
+
           <Button
             title="SIGN UP"
             onPress={() => SignupB()}
@@ -228,6 +308,7 @@ const App = (props) => {
               borderRadius: 6,
               borderColor: '#fe4270',
               backgroundColor: '#fe4270',
+              marginTop: 20,
             }}
             titleStyle={{
               fontSize: 15,

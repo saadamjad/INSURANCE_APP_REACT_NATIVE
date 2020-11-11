@@ -12,6 +12,7 @@ import {
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {SliderBox} from 'react-native-image-slider-box';
 import {DrawerActions} from 'react-navigation';
+import Entypo from 'react-native-vector-icons/Entypo';
 import Carousel from 'react-native-snap-carousel';
 let screenWidth = Dimensions.get('window').width / 1;
 // let testin = ;
@@ -224,6 +225,7 @@ const App = (props) => {
               flex: 1,
               justifyContent: 'space-between',
               flexDirection: 'row',
+              alignItems: 'center',
               paddingHorizontal: 15,
               // backgroundColor: 'red',
             }}>
@@ -245,6 +247,28 @@ const App = (props) => {
                 resizeMode="contain"
               />
             </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 50,
+                backgroundColor: 'white',
+
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+              onPress={() => _carousel2.snapToPrev()}>
+              {/* <Image
+                source={require('../../assets/icons/icons/videos.png')}
+                style={{
+                  height: 35,
+                  width: 35,
+                }}
+                resizeMode="contain"
+              /> */}
+              <Entypo name="controller-play" size={40} color="#ff235d" />
+            </TouchableOpacity>
+
             <TouchableOpacity
               style={{
                 height: '100%',
@@ -282,10 +306,11 @@ const App = (props) => {
       showsVerticalScrollIndicator={false}>
       <View
         style={{
-          height: 30,
+          // height: 30,
           width: '100%',
           flexDirection: 'row',
           width: '100%',
+          paddingVertical: 10,
           // borderWidth: 1,
           backgroundColor: '#ff235d',
 
@@ -303,7 +328,7 @@ const App = (props) => {
           }}>
           <Image
             source={require('../../assets/icons/icons/menu.png')}
-            style={{height: 20, width: 20}}
+            style={{height: 30, width: 30}}
             resizeMode="contain"
           />
         </TouchableOpacity>
@@ -313,7 +338,12 @@ const App = (props) => {
 
             alignItems: 'center',
           }}>
-          <Text style={{color: '#FFFFFF', fontFamily: 'FredokaOne-Regular'}}>
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'FredokaOne-Regular',
+              fontSize: 16,
+            }}>
             Home
           </Text>
         </View>
@@ -323,13 +353,10 @@ const App = (props) => {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <FontAwesome
-            name="bell"
-            size={16}
-            color="#FFFFFFFF"
-            style={{
-              alignItems: 'flex-end',
-            }}
+          <Image
+            source={require('../../assets/icons/icons/notification.png')}
+            style={{height: 30, width: 30}}
+            resizeMode="contain"
           />
         </View>
       </View>
@@ -337,11 +364,11 @@ const App = (props) => {
       <ImageBackground
         source={require('../../assets/icons/background.png')}
         style={{flex: 1}}
-        resizeMode="stretch">
+        resizeMode="cover">
         <View
           style={{
             // backgroundColor: 'black',
-            height: 240,
+            height: 250,
             paddingHorizontal: 40,
             alignItems: 'center',
             marginTop: 30,
@@ -358,10 +385,11 @@ const App = (props) => {
             inactiveDotColor="#90A4AE"
             // paginationBoxStyle={{marginTop: 40}}
             dotStyle={{
-              width: 10,
-              height: 10,
+              width: 15,
+              height: 15,
               borderRadius: 15,
               marginHorizontal: -5,
+              marginTop: 10,
               padding: 0,
               margin: 0,
             }}
@@ -393,6 +421,7 @@ const App = (props) => {
             style={{
               alignItems: 'center',
               marginBottom: 10,
+              marginTop: 10,
             }}>
             <Text
               style={{

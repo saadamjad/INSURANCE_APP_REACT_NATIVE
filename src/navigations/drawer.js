@@ -1,14 +1,5 @@
-import {Icon} from 'native-base';
 import React from 'react';
-import {
-  View,
-  Text,
-  Animated,
-  Dimensions,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 const DrawerContent = (props) => {
   let activeName = props?.state?.history[1]?.key?.split('-')[0];
   let array;
@@ -29,7 +20,7 @@ const DrawerContent = (props) => {
             },
             {
               title: 'Products',
-              name: 'Home',
+              name: 'OurProducts',
               type: 'Entypo',
               icon: require('../assets/icons/70.png'),
             },
@@ -137,6 +128,7 @@ const DrawerContent = (props) => {
                       fontWeight: i == 8 ? 'bold' : '100',
                       textAlign: i == 8 ? 'center' : 'left',
                       color: i == 8 ? '#e82e53' : 'white',
+                      fontFamily: 'Montserrat-Regular',
                     }}>
                     {val.title}
                   </Text>

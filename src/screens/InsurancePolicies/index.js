@@ -78,7 +78,7 @@ const App = (props) => {
               onPress={() => props.navigation.goBack()}>
               <AntDesign
                 name="arrowleft"
-                size={20}
+                size={25}
                 color="#FFFFFFFF"
                 style={{
                   alignItems: 'flex-end',
@@ -91,7 +91,7 @@ const App = (props) => {
                   color: '#FFFFFF',
                   fontSize: 18,
 
-                  fontFamily: 'Montserrat-Medium',
+                  fontFamily: 'Montserrat-Bold',
                 }}>
                 Insurance Policies
               </Text>
@@ -99,7 +99,7 @@ const App = (props) => {
             <View>
               <Image
                 source={require('../../assets/icons/58.png')}
-                style={{height: 20, width: 20}}
+                style={{height: 23, width: 23, tintColor: 'white'}}
                 resizeMode="contain"
               />
             </View>
@@ -334,7 +334,7 @@ const App = (props) => {
                   <View>
                     <Button
                       title="GET NOW"
-                      // onPress={() => function()}
+                      onPress={() => callfunction()}
                       buttonStyle={{
                         backgroundColor: '#ff235d',
                         width: 85,

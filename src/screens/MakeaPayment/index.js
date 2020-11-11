@@ -70,26 +70,74 @@ const App = (props) => {
                 }}>
                 Payment Details
               </Text>
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff235d',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Order:{' '}
-                <Text style={{color: 'black', fontSize: 12}}>{item.order}</Text>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
+                  {item.order}
+                </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff235d',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Premium:{' '}
-                <Text style={{color: 'black', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   {item.premium}
                 </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff235d',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Tax(13%):{' '}
-                <Text style={{color: 'black', fontSize: 12}}>{item.tax}</Text>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
+                  {item.tax}
+                </Text>
               </Text>
 
-              <Text style={{color: '#ff235d', fontSize: 12}}>
+              <Text
+                style={{
+                  color: '#ff235d',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 Service Fee (5%):{' '}
-                <Text style={{color: 'black', fontSize: 12}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 12,
+                    fontFamily: 'Montserrat-Medium',
+                  }}>
                   {item.serviceFee}
                 </Text>
               </Text>
@@ -108,7 +156,7 @@ const App = (props) => {
                   style={{
                     color: '#ff235d',
                     fontSize: 13,
-                    fontWeight: 'bold',
+                    fontFamily: 'Montserrat-Bold',
                   }}>
                   Total Payment:{' '}
                 </Text>
@@ -166,6 +214,7 @@ const App = (props) => {
                 fontSize: 12,
                 marginTop: 10,
                 marginBottom: 3,
+                fontFamily: 'Montserrat-Regular',
               }}>
               {' '}
               Card Name
@@ -184,7 +233,7 @@ const App = (props) => {
                 style={{
                   flex: 1,
                   marginLeft: 5,
-                  fontSize: 10,
+                  fontSize: 15,
                 }}
               />
             </View>
@@ -194,6 +243,7 @@ const App = (props) => {
                 color: 'black',
                 fontSize: 12,
                 marginTop: 20,
+                fontFamily: 'Montserrat-Regular',
                 marginBottom: 3,
               }}>
               {' '}
@@ -213,7 +263,7 @@ const App = (props) => {
                 style={{
                   flex: 1,
                   marginLeft: 5,
-                  fontSize: 10,
+                  fontSize: 15,
                 }}
               />
             </View>
@@ -227,22 +277,22 @@ const App = (props) => {
               }}>
               <Image
                 source={require('../../assets/icons/card1.png')}
-                style={{height: 30, width: 30, marginRight: 10}}
+                style={{height: 37, width: 40, marginRight: 10}}
                 resizeMode="contain"
               />
               <Image
                 source={require('../../assets/icons/card2.png')}
-                style={{height: 30, width: 30, marginRight: 10}}
+                style={{height: 37, width: 40, marginRight: 10}}
                 resizeMode="contain"
               />
               <Image
                 source={require('../../assets/icons/card3.png')}
-                style={{height: 30, width: 30, marginRight: 10}}
+                style={{height: 37, width: 40, marginRight: 10}}
                 resizeMode="contain"
               />
               <Image
                 source={require('../../assets/icons/card4.png')}
-                style={{height: 30, width: 30, marginRight: 10}}
+                style={{height: 37, width: 40, marginRight: 10}}
                 resizeMode="contain"
               />
             </View>
@@ -255,6 +305,7 @@ const App = (props) => {
                     fontSize: 12,
                     marginTop: 10,
                     marginBottom: 3,
+                    fontFamily: 'Montserrat-Regular',
                   }}>
                   Expiration Date
                 </Text>
@@ -273,7 +324,7 @@ const App = (props) => {
                     style={{
                       flex: 1,
                       marginLeft: 5,
-                      fontSize: 10,
+                      fontSize: 15,
                     }}
                     placeholderTextColor="black"
                     placeholder="MM/YY"
@@ -289,6 +340,7 @@ const App = (props) => {
                     marginBottom: 3,
                     fontSize: 12,
                     marginTop: 10,
+                    fontFamily: 'Montserrat-Regular',
                   }}>
                   CVV
                 </Text>
@@ -306,7 +358,7 @@ const App = (props) => {
                     style={{
                       flex: 1,
                       marginLeft: 5,
-                      fontSize: 10,
+                      fontSize: 15,
                     }}
                     placeholderTextColor="black"
                     placeholder="XXXX"

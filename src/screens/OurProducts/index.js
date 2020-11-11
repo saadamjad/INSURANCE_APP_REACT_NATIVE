@@ -36,7 +36,7 @@ const App = (props) => {
         horizontal={false}
         showsVerticalScrollIndicator={false}
         automaticallyAdjustContentInsets={false}
-        style={{marginBottom: 40}}>
+        style={{}}>
         <View style={{flexDirection: 'row', borderWidth: 0, height: 50}}>
           <View
             style={{
@@ -90,6 +90,7 @@ const App = (props) => {
             </TouchableOpacity>
           );
         })}
+        <View style={{height: 60}}></View>
       </ScrollView>
     </SafeAreaView>
   );
