@@ -29,16 +29,16 @@ const App = (props) => {
   ];
   const [ourProducts, setOurProducts] = useState([
     {
-      image: require('../../assets/icons/travel.png'),
+      image: require('../../assets/travel.png'),
     },
     {
-      image: require('../../assets/icons/health.png'),
+      image: require('../../assets/health.png'),
     },
     {
-      image: require('../../assets/icons/life.png'),
+      image: require('../../assets/life.png'),
     },
     {
-      image: require('../../assets/icons/car.png'),
+      image: require('../../assets/cari.png'),
     },
   ]);
 
@@ -65,28 +65,40 @@ const App = (props) => {
 
   const [slider1, setSlider1] = useState([
     {
-      image: require('../../assets/icons/34.png'),
+      image: require('../../assets/travel/article.png'),
       title:
         'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
     },
 
     {
-      image: require('../../assets/icons/34.png'),
+      image: require('../../assets/travel/article.png'),
       title:
         'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
     },
 
     {
-      image: require('../../assets/icons/34.png'),
+      image: require('../../assets/travel/article.png'),
       title:
         'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
     },
 
     {
-      image: require('../../assets/icons/34.png'),
+      image: require('../../assets/travel/article.png'),
       title:
         'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
     },
+
+    // {
+    //   image: require('../../assets/icons/34.png'),
+    //   title:
+    //     'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
+    // },
+
+    // {
+    //   image: require('../../assets/icons/34.png'),
+    //   title:
+    //     'Grand coverage oof $5000 at a basic premiuim as low as PKR 2700/-',
+    // },
   ]);
 
   const [slider2, setSlider2] = useState([
@@ -118,93 +130,105 @@ const App = (props) => {
   const _renderItem = ({item, index}) => {
     console.log('i', index);
     return (
+      // <View
+      //   style={{
+      //     height: 250,
+      //     borderWidth: 1,
+      //     // width: '100%',
+      //     // alignItems: 'center',
+      //     // justifyContent: 'center',
+      //     // borderWidth: 1,
+      //     width: '95%',
+      //     alignSelf: 'center',
+      //     borderRadius: 10,
+      //     overflow: 'hidden',
+      //     // elevation: 2,
+      //     backgroundColor: 'white',
+      //   }}>
+      //   <View>
       <View
         style={{
-          height: 250,
-          // width: '100%',
-          // alignItems: 'center',
-          // justifyContent: 'center',
-          // borderWidth: 1,
-          width: '95%',
-          alignSelf: 'center',
-          borderRadius: 10,
+          height: 220,
+          width: '92%',
           overflow: 'hidden',
-          elevation: 2,
-          backgroundColor: 'white',
+          alignSelf: 'center',
+          // borderWidth: 1,
         }}>
-        <View>
-          <ImageBackground
-            source={item.image}
+        <ImageBackground
+          source={item.image}
+          style={{
+            height: '100%',
+            width: '100%',
+            // justifyContent: 'center',
+            // backgroundColor: 'red',
+          }}
+          resizeMode="contain">
+          <View
             style={{
-              height: '100%',
-              width: '100%',
-              // justifyContent: 'center',
-              borderRadius: 10,
-            }}
-            resizeMode="cover">
-            <View
+              flex: 0.6,
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+              alignItems: 'center',
+              // borderWidth: 1,
+              paddingTop: 20,
+              // paddingHorizontal: 15,
+            }}>
+            <TouchableOpacity
               style={{
-                flex: 0.7,
-                justifyContent: 'space-between',
-                flexDirection: 'row',
-                alignItems: 'center',
-                // paddingHorizontal: 15,
-              }}>
-              <TouchableOpacity
-                style={{
-                  height: '100%',
-                  width: 30,
+                height: '100%',
+                width: 38,
 
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                onPress={() => _carousel.snapToPrev()}>
-                <Image
-                  source={require('../../assets/assets/32.png')}
-                  style={{
-                    height: 15,
-                    width: 15,
-                  }}
-                  resizeMode="contain"
-                />
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{
-                  height: '100%',
-                  width: 30,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                onPress={() => _carousel.snapToNext()}>
-                <Image
-                  source={require('../../assets/assets/33.png')}
-                  style={{height: 15, width: 15}}
-                  resizeMode="contain"
-                />
-              </TouchableOpacity>
-            </View>
-
-            <View
-              style={{
-                flex: 0.3,
-                borderWidth: 0,
                 alignItems: 'center',
                 justifyContent: 'center',
-                paddingHorizontal: 10,
-              }}>
-              <Text
+              }}
+              onPress={() => _carousel.snapToPrev()}>
+              <Image
+                source={require('../../assets/assets/32.png')}
                 style={{
-                  color: 'white',
+                  height: 15,
+                  width: 15,
+                }}
+                resizeMode="contain"
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                height: '100%',
+                width: 38,
+                // borderWidth: 1,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+              onPress={() => _carousel.snapToNext()}>
+              <Image
+                source={require('../../assets/assets/33.png')}
+                style={{height: 15, width: 15}}
+                resizeMode="contain"
+              />
+            </TouchableOpacity>
+          </View>
 
-                  fontFamily: 'Montserrat-Medium',
-                  // fontSize: 12,
-                }}>
-                {item.title}
-              </Text>
-            </View>
-          </ImageBackground>
-        </View>
+          <View
+            style={{
+              flex: 0.4,
+              borderWidth: 0,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingHorizontal: 10,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+
+                fontFamily: 'Montserrat-Medium',
+                // fontSize: 12,
+              }}>
+              {item.title}
+            </Text>
+          </View>
+        </ImageBackground>
       </View>
+      // </View>
     );
   };
   const _renderItem2 = ({item, index}) => {
@@ -213,6 +237,8 @@ const App = (props) => {
       <View
         style={{
           height: 250,
+          width: '92%',
+          alignSelf: 'center',
         }}>
         <ImageBackground
           source={item.image}
@@ -234,7 +260,7 @@ const App = (props) => {
                 height: '100%',
                 width: 30,
 
-                alignItems: 'center',
+                // alignItems: 'center',
                 justifyContent: 'center',
               }}
               onPress={() => _carousel2.snapToPrev()}>
@@ -248,15 +274,16 @@ const App = (props) => {
               />
             </TouchableOpacity>
             <TouchableOpacity
-              style={{
-                height: 50,
-                width: 50,
-                borderRadius: 50,
-                backgroundColor: 'white',
-
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
+              style={
+                {
+                  // height: 50,
+                  // width: 50,
+                  // borderRadius: 50,
+                  // backgroundColor: 'white',
+                  // alignItems: 'center',
+                  // justifyContent: 'center',
+                }
+              }
               onPress={() => _carousel2.snapToPrev()}>
               {/* <Image
                 source={require('../../assets/icons/icons/videos.png')}
@@ -266,14 +293,22 @@ const App = (props) => {
                 }}
                 resizeMode="contain"
               /> */}
-              <Entypo name="controller-play" size={40} color="#ff235d" />
+              {/* <Entypo name="controller-play" size={40} color="#ff235d" /> */}
+              <Image
+                source={require('../../assets/video.png')}
+                style={{
+                  height: 50,
+                  width: 50,
+                }}
+                resizeMode="contain"
+              />
             </TouchableOpacity>
 
             <TouchableOpacity
               style={{
                 height: '100%',
                 width: 30,
-                alignItems: 'center',
+                alignItems: 'flex-end',
                 justifyContent: 'center',
               }}
               onPress={() => _carousel2.snapToNext()}>
@@ -291,7 +326,7 @@ const App = (props) => {
 
               fontFamily: 'Montserrat-Medium',
               marginLeft: 20,
-              marginBottom: 10,
+              marginBottom: 18,
             }}>
             {item.title}
           </Text>
@@ -438,7 +473,8 @@ const App = (props) => {
             style={{
               flexDirection: 'row',
 
-              width: '100%',
+              width: '93%',
+              alignSelf: 'center',
               flexWrap: 'wrap',
               alignItems: 'center',
               justifyContent: 'center',
@@ -449,6 +485,7 @@ const App = (props) => {
                   style={{
                     height: 90,
                     width: '50%',
+
                     // borderWidth: 1,
                     // justifyContent: 'center',
                     // backgroundColor: 'red',
@@ -457,11 +494,26 @@ const App = (props) => {
                     // props.navigation.navigate('insurancepolicies')
                     props.navigation.navigate('OurProducts')
                   }>
-                  <Image
-                    source={item.image}
-                    style={{height: '100%', width: '100%'}}
-                    resizeMode="contain"
-                  />
+                  <View
+                    style={
+                      {
+                        // shadowColor: '#000',
+                        // backgroundColor: 'white',
+                        // shadowOffset: {
+                        //   width: 0,
+                        //   height: 2,
+                        // },
+                        // shadowOpacity: 0.25,
+                        // shadowRadius: 3.84,
+                        // elevation: 5,
+                      }
+                    }>
+                    <Image
+                      source={item.image}
+                      style={{height: '100%', width: '100%'}}
+                      resizeMode="contain"
+                    />
+                  </View>
                 </TouchableOpacity>
               );
             })}

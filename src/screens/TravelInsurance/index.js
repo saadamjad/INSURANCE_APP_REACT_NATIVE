@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Button} from 'react-native-elements';
 import {
   Text,
@@ -8,6 +8,7 @@ import {
   TextInput,
   ScrollView,
   TouchableOpacity,
+  ImageBackground,
 } from 'react-native';
 
 const App = (props) => {
@@ -27,10 +28,330 @@ const App = (props) => {
     {countryName: '28 july 2021'},
   ]);
 
+  const [carPolicy, setCarPolicy] = useState(false);
+  useEffect(() => {
+    console.log('prrrr', props.route.params);
+    console.log(
+      'sss==',
+      props.route.params ? props.route.params.carInsurance : false,
+    );
+    let getState = props.route.params ? props.route.params.carInsurance : false;
+    setCarPolicy(getState);
+  }, []);
   const SignupB = () => {
-    props.navigation.navigate('insurancepolicies');
+    props.navigation.navigate('insurancepolicies', {
+      carInsurance: true,
+    });
   };
-  return (
+  return carPolicy ? (
+    <ImageBackground
+      source={require('../../assets/travel/carinsurance.png')}
+      style={{height: '100%', width: '100%'}}
+      resizeMode="cover"
+      // res
+    >
+      <ScrollView
+        contentContainerStyle={{flexGrow: 1}}
+        showsVerticalScrollIndicator={false}>
+        <View
+          style={{
+            width: '90%',
+            alignSelf: 'center',
+            flex: 1,
+            // borderWidth: 1,
+            marginBottom: 20,
+            // backgroundColor: 'red',
+            justifyContent: 'flex-end',
+          }}>
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingHorizontal: 20,
+              // borderWidth: 1,
+              marginTop: 20,
+              // marginBottom: 20,
+            }}>
+            <Text
+              style={{
+                fontSize: 18,
+
+                color: 'black',
+                fontFamily: 'FredokaOne-Regular',
+                marginTop: 50,
+              }}>
+              Car Insurance
+            </Text>
+            <Text
+              style={{
+                fontSize: 12,
+                color: 'black',
+                textAlign: 'center',
+                paddingTop: 5,
+                marginBottom: 20,
+              }}>
+              Compare best quotes & buy your Car Insurance policy online
+            </Text>
+          </View>
+
+          <Text
+            style={{
+              color: 'black',
+
+              fontSize: 12,
+              marginBottom: 3,
+              marginTop: 0,
+            }}>
+            Car Brand
+          </Text>
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              borderWidth: 2,
+              borderColor: '#fe4270',
+              borderRadius: 8,
+              width: '100%',
+              height: 45,
+              alignItems: 'center',
+            }}
+            onPress={() => {
+              setopenCountries(!openCountries);
+              // setOpenDate(false);
+            }}>
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/57.png')}
+                style={{height: 15, width: 15}}
+              />
+            </View>
+            <View
+              style={{
+                flex: 0.8,
+                marginLeft: 5,
+                fontSize: 10,
+              }}>
+              <Text> {selectContrysNamem} </Text>
+            </View>
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/52.png')}
+                style={{height: 15, width: 15}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableOpacity>
+
+          {openCountries ? (
+            <TouchableOpacity
+              style={{
+                width: '98%',
+
+                borderColor: 'red',
+                elevation: 2,
+                paddingVertical: 10,
+                backgroundColor: 'white',
+                alignSelf: 'center',
+              }}>
+              {allCountries.map((item, i) => {
+                return (
+                  <Text
+                    style={{
+                      paddingVertical: 10,
+                      borderBottomWidth: 0.1,
+                      borderColor: 'red',
+                      paddingLeft: 10,
+                      width: '100%',
+                    }}
+                    onPress={() => {
+                      setSelectContrysName(item.countryName),
+                        setopenCountries(false);
+                      setOpenDate(false);
+                    }}>
+                    {item.countryName}
+                  </Text>
+                );
+              })}
+            </TouchableOpacity>
+          ) : null}
+
+          <Text
+            style={{
+              color: 'black',
+
+              fontSize: 12,
+              marginTop: 20,
+              marginBottom: 3,
+            }}>
+            Car Model
+          </Text>
+
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              borderWidth: 2,
+              borderColor: '#fe4270',
+              borderRadius: 8,
+              width: '100%',
+              height: 45,
+              alignItems: 'center',
+            }}
+            onPress={() => {
+              setOpenDate(!openDate);
+              setopenCountries(false);
+            }}>
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/55.png')}
+                style={{height: 15, width: 15}}
+              />
+            </View>
+            <View
+              style={{
+                flex: 0.8,
+                marginLeft: 5,
+                fontSize: 10,
+              }}>
+              <Text> {selectDate} </Text>
+            </View>
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/52.png')}
+                style={{height: 15, width: 15}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableOpacity>
+
+          {openDate ? (
+            <TouchableOpacity
+              style={{
+                width: '98%',
+
+                borderColor: 'red',
+                elevation: 2,
+                paddingVertical: 10,
+                backgroundColor: 'white',
+                alignSelf: 'center',
+                // zIndex: '-1000',
+              }}>
+              {allDate.map((item, i) => {
+                return (
+                  <Text
+                    style={{
+                      paddingVertical: 10,
+                      borderBottomWidth: 0.1,
+                      borderColor: 'red',
+                      paddingLeft: 10,
+                      width: '100%',
+                    }}
+                    onPress={() => {
+                      setDate(item.countryName), setOpenDate(!openDate);
+                    }}>
+                    {item.countryName}
+                  </Text>
+                );
+              })}
+            </TouchableOpacity>
+          ) : null}
+
+          <Text
+            style={{
+              color: 'black',
+
+              fontSize: 12,
+              marginTop: 20,
+              marginBottom: 3,
+            }}>
+            Passenger Travelling
+          </Text>
+
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              borderWidth: 2,
+              borderColor: '#fe4270',
+              borderRadius: 8,
+              width: '100%',
+              height: 45,
+              alignItems: 'center',
+            }}
+            onPress={() => {
+              setOpenDate(!openDate);
+              setopenCountries(false);
+            }}>
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/51.png')}
+                style={{height: 15, width: 15}}
+              />
+            </View>
+            <TextInput
+              style={{
+                flex: 0.8,
+                marginLeft: 5,
+                fontSize: 10,
+              }}
+            />
+
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/52.png')}
+                style={{height: 15, width: 15}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableOpacity>
+
+          <Button
+            title="Search"
+            onPress={() => SignupB()}
+            buttonStyle={{
+              backgroundColor: '#ff235d',
+              width: '100%',
+              height: 50,
+              borderRadius: 8,
+            }}
+            titleStyle={{fontSize: 15, letterSpacing: 1}}
+            containerStyle={{
+              marginVertical: 20,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          />
+        </View>
+      </ScrollView>
+    </ImageBackground>
+  ) : (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       <ScrollView
         contentContainerStyle={{flexGrow: 1}}
@@ -261,6 +582,63 @@ const App = (props) => {
               })}
             </TouchableOpacity>
           ) : null}
+          <Text
+            style={{
+              color: 'black',
+
+              fontSize: 12,
+              marginTop: 20,
+              marginBottom: 3,
+            }}>
+            Manufatured Car Value
+          </Text>
+
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              borderWidth: 2,
+              borderColor: '#fe4270',
+              borderRadius: 8,
+              width: '100%',
+              height: 45,
+              alignItems: 'center',
+            }}
+            onPress={() => {
+              setOpenDate(!openDate);
+              setopenCountries(false);
+            }}>
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/51.png')}
+                style={{height: 15, width: 15}}
+              />
+            </View>
+            <TextInput
+              style={{
+                flex: 0.8,
+                marginLeft: 5,
+                fontSize: 10,
+              }}
+            />
+
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/52.png')}
+                style={{height: 15, width: 15}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableOpacity>
 
           <Text
             style={{
@@ -270,7 +648,7 @@ const App = (props) => {
               marginTop: 20,
               marginBottom: 3,
             }}>
-            Passenger Travelling
+            Estimate Car Value
           </Text>
 
           <TouchableOpacity

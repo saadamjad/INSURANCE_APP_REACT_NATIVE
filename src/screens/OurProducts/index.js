@@ -30,6 +30,16 @@ const App = (props) => {
     props.navigation.navigate('MakeaPayment');
   };
 
+  const _OpenPolicies = (i) => {
+    console.log('i', i);
+    if (i == 2) {
+      props.navigation.navigate('TravelInsurance', {
+        carInsurance: true,
+      });
+    } else {
+      props.navigation.navigate('TravelInsurance');
+    }
+  };
   return (
     <SafeAreaView style={{backgroundColor: 'white', flex: 1}}>
       <ScrollView
@@ -82,7 +92,7 @@ const App = (props) => {
                 // elevation: 5,
               }}
               // onPress={() => callingfunction()}
-              onPress={() => props.navigation.navigate('TravelInsurance')}>
+              onPress={() => _OpenPolicies(i)}>
               <Image
                 source={item.image}
                 style={{height: '100%', width: '100%', resizeMode: 'stretch'}}
