@@ -139,7 +139,8 @@ const App = (props) => {
                   alignItems: 'center',
                 }}>
                 <Image
-                  source={require('../../assets/icons/57.png')}
+                  // source={require('../../assets/icons/57.png')}
+                  source={require('../../assets/travel/car2.png')}
                   style={{height: 15, width: 15}}
                 />
               </View>
@@ -149,7 +150,7 @@ const App = (props) => {
                   marginLeft: 5,
                   fontSize: 10,
                 }}>
-                <Text> {selectContrysNamem} </Text>
+                {/* <Text> {selectContrysNamem} </Text> */}
               </View>
               <View
                 style={{
@@ -165,7 +166,7 @@ const App = (props) => {
               </View>
             </TouchableOpacity>
 
-            {openCountries ? (
+            {/* {openCountries ? (
               <TouchableOpacity
                 style={{
                   width: '98%',
@@ -196,7 +197,7 @@ const App = (props) => {
                   );
                 })}
               </TouchableOpacity>
-            ) : null}
+            ) : null} */}
 
             <Text
               style={{
@@ -230,7 +231,8 @@ const App = (props) => {
                   alignItems: 'center',
                 }}>
                 <Image
-                  source={require('../../assets/icons/55.png')}
+                  // source={require('../../assets/icons/55.png')}
+                  source={require('../../assets/travel/car2.png')}
                   style={{height: 15, width: 15}}
                 />
               </View>
@@ -240,7 +242,7 @@ const App = (props) => {
                   marginLeft: 5,
                   fontSize: 10,
                 }}>
-                <Text> {selectDate} </Text>
+                {/* <Text> {selectDate} </Text> */}
               </View>
               <View
                 style={{
@@ -256,7 +258,7 @@ const App = (props) => {
               </View>
             </TouchableOpacity>
 
-            {openDate ? (
+            {/* {openDate ? (
               <TouchableOpacity
                 style={{
                   width: '98%',
@@ -286,7 +288,7 @@ const App = (props) => {
                   );
                 })}
               </TouchableOpacity>
-            ) : null}
+            ) : null} */}
 
             <Text
               style={{
@@ -320,7 +322,8 @@ const App = (props) => {
                   alignItems: 'center',
                 }}>
                 <Image
-                  source={require('../../assets/icons/51.png')}
+                  // source={require('../../assets/icons/51.png')}
+                  source={require('../../assets/travel/calendar.png')}
                   style={{height: 15, width: 15}}
                 />
               </View>
@@ -378,7 +381,8 @@ const App = (props) => {
                   alignItems: 'center',
                 }}>
                 <Image
-                  source={require('../../assets/icons/51.png')}
+                  // source={require('../../assets/icons/51.png')}
+                  source={require('../../assets/travel/cardollar.png')}
                   style={{height: 15, width: 15}}
                 />
               </View>
@@ -390,7 +394,7 @@ const App = (props) => {
                 }}
               />
 
-              <View
+              {/* <View
                 style={{
                   flex: 0.1,
                   justifyContent: 'center',
@@ -401,7 +405,7 @@ const App = (props) => {
                   style={{height: 15, width: 15}}
                   resizeMode="contain"
                 />
-              </View>
+              </View> */}
             </TouchableOpacity>
 
             <Button
