@@ -87,18 +87,21 @@ const App = (props) => {
   ]);
 
   const callfunction = () => {
-    props.navigation.navigate('OrderDetailsRelatives');
+    props.navigation.navigate('OrderDetailsRelatives',{
+      carInsurance:carPolicy ? true:false
+
+    });
   };
+  
   useEffect(() => {
-    console.log('prrrr', props.route.params);
-    console.log(
-      'sss==',
-      props.route.params ? props.route.params.carInsurance : false,
-    );
+    // console.log('prrrr', props.route.params);
+    
     let getState = props.route.params ? props.route.params.carInsurance : false;
     setCarPolicy(getState);
   }, []);
   return carPolicy ? (
+    console.log("sss",carPolicy),
+   
     <ImageBackground
       source={require('../../assets/travel/car.png')}
       style={{
@@ -108,9 +111,11 @@ const App = (props) => {
       }}>
       <ScrollView
         contentContainerStyle={{flexGrow: 1}}
-        showsVerticalScrollIndicator={false}>
-        <SafeAreaView
-          style={{width: '90%', alignSelf: 'center', paddingBottom: 80}}>
+        showsVerticalScrollIndicator={false}
+        style={{width:'90%',alignSelf:'center'}}
+        
+        >
+ 
           {/* ==========Header Row========== */}
 
           <View
@@ -308,7 +313,6 @@ const App = (props) => {
               </TouchableOpacity>
             );
           })}
-        </SafeAreaView>
       </ScrollView>
     </ImageBackground>
   ) : (

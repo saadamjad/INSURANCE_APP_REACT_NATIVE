@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {Button} from 'react-native-elements';
 import {Text, View, SafeAreaView} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 const App = (props) => {
+  const [carPolicy, setCarPolicy] = useState(false);
+
   const [personal, setPersonal] = useState([
     {
       name: 'Abdul Samad',
@@ -31,7 +33,248 @@ const App = (props) => {
       arrivalCountry: 'Pakistan',
     },
   ]);
-  return (
+ 
+  useEffect(() => {
+    let getState = props.route.params ? props.route.params.carInsurance : false;
+    setCarPolicy(getState);
+  }, []);
+  const _NextPage=()=>{
+    props.navigation.navigate('orderconfirmed',{
+      carInsurance:carPolicy ? true:false
+
+    })
+  }
+  return carPolicy?(
+    <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
+      <ScrollView
+        style={{}}
+        contentContainerStyle={{flexGrow: 1}}
+        showsVerticalScrollIndicator={false}>
+        <View
+          style={{
+            alignItems: 'center',
+            height: 70,
+            // borderWidth: 1,
+            justifyContent: 'center',
+          }}>
+          <Text
+            style={{
+              color: '#ff396b',
+              fontSize: 18,
+
+              fontFamily: 'FredokaOne-Regular',
+            }}>
+          Car & Owner Details
+          </Text>
+        </View>
+
+        {/* ==========Personal Details========== */}
+
+        {personal.map((item, i) => {
+          return (
+            <View
+              key={i}
+              style={{
+                width: '100%',
+                padding: 10,
+                borderWidth: 0.025,
+                borderColor: '#FFFFFF',
+                borderRadius: 5,
+                backgroundColor: 'white',
+                shadowColor: '#000',
+                width: '90%',
+                alignSelf: 'center',
+                shadowOffset: {
+                  width: 0,
+                  height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+
+                elevation: 8,
+                marginVertical: 10,
+              }}>
+          
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+                  fontFamily: 'Montserrat-Regular',
+                }}>
+                Car owner Name:{' '}
+                <Text style={{color: 'black', fontSize: 12}}>{item.name}</Text>
+              </Text>
+
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
+                CNIC:{' '}
+                <Text style={{color: 'black', fontSize: 12}}>
+                  {item.gender}
+                </Text>
+              </Text>
+
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
+                Contact number:{' '}
+                <Text style={{color: 'black', fontSize: 12}}>
+                  {item.contactNumber}
+                </Text>
+              </Text>
+
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
+                Date of Inspection :{' '}
+                <Text style={{color: 'black', fontSize: 12}}>12 Mar   2020</Text>
+              </Text>
+
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
+                Preferred Time:{' '}
+                <Text style={{color: 'black', fontSize: 12}}>
+                  12:02
+                </Text>
+              </Text>
+
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
+                Email:{' '}
+                <Text style={{color: 'black', fontSize: 12}}>{item.email}</Text>
+              </Text>
+
+              <Text
+                style={{
+                  color: '#ff396b',
+                  fontSize: 12,
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
+                Address:{' '}
+                <Text style={{color: 'black', fontSize: 12}}>
+                  {item.address}
+                </Text>
+              </Text>
+            </View>
+          );
+        })}
+
+
+        {/* ==========Buttons========== */}
+
+        <View
+          style={{
+            flexDirection: 'row',
+            // justifyContent: 'space-evenly',
+            width: '90%',
+            marginBottom: 60,
+            marginTop: 40,
+            paddingHorizontal: 10,
+            // marginVertical: 80,
+            // borderWidth: 1,
+            alignSelf: 'center',
+          }}>
+          <View style={{flex: 0.5, borderWidth: 0, justifyContent: 'center'}}>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+              }}>
+              <Text
+                style={{
+                  color: '#ff4270',
+                  textAlign: 'center',
+
+                  fontFamily: 'Montserrat-Regular',
+                }}>
+                EDIT INFO
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={{flex: 0.5, borderWidth: 0, justifyContent: 'center'}}>
+            <Button
+              title="PAYMENT"
+              onPress={() =>_NextPage()}
+              buttonStyle={{
+                backgroundColor: '#ff396b',
+                width: '90%',
+                height: 50,
+                borderRadius: 8,
+              }}
+              titleStyle={{
+                fontSize: 15,
+              }}
+              containerStyle={
+                {
+                  // alignItems: 'center',
+                  // justifyContent: 'center',
+                }
+              }
+            />
+          </View>
+
+          {/* <TouchableOpacity
+            style={{
+              width: 120,
+              height: 45,
+              justifyContent: 'center',
+            }}>
+            <Text
+              style={{
+                color: '#ff4270',
+                // fontWeight: 'bold',
+                textAlign: 'center',
+                // letterSpacing: 1,
+                // fontFamily: 'FredokaOne-Regular',
+                fontFamily: 'Montserrat-Regular',
+              }}>
+              EDIT INFO
+            </Text>
+          </TouchableOpacity>
+          <Button
+            title="PAYMENT"
+            onPress={() => props.navigation.navigate('orderconfirmed')}
+            buttonStyle={{
+              backgroundColor: '#ff396b',
+              width: 140,
+              height: 50,
+              borderRadius: 8,
+            }}
+            titleStyle={{
+              fontSize: 12,
+            }}
+            containerStyle={{
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          /> */}
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  ):
+  (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <ScrollView
         style={{}}
@@ -418,7 +661,7 @@ const App = (props) => {
           <View style={{flex: 0.5, borderWidth: 0, justifyContent: 'center'}}>
             <Button
               title="PAYMENT"
-              onPress={() => props.navigation.navigate('orderconfirmed')}
+              onPress={() => _NextPage()}
               buttonStyle={{
                 backgroundColor: '#ff396b',
                 width: '90%',

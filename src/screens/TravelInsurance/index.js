@@ -30,11 +30,8 @@ const App = (props) => {
 
   const [carPolicy, setCarPolicy] = useState(false);
   useEffect(() => {
-    console.log('prrrr', props.route.params);
-    console.log(
-      'sss==',
-      props.route.params ? props.route.params.carInsurance : false,
-    );
+    // console.log('prrrr', props.route.params);
+   
     let getState = props.route.params ? props.route.params.carInsurance : false;
     setCarPolicy(getState);
   }, []);
@@ -43,16 +40,22 @@ const App = (props) => {
       carInsurance: true,
     });
   };
+  const SignupB2 = () => {
+    props.navigation.navigate('insurancepolicies', {
+      carInsurance: false,
+    });
+  };
   return carPolicy ? (
+    <ScrollView
+        contentContainerStyle={{flexGrow: 1}}
+        showsVerticalScrollIndicator={false}>
     <ImageBackground
       source={require('../../assets/travel/carinsurance.png')}
       style={{height: '100%', width: '100%'}}
-      resizeMode="cover"
+      resizeMode='stretch'
       // res
     >
-      <ScrollView
-        contentContainerStyle={{flexGrow: 1}}
-        showsVerticalScrollIndicator={false}>
+      
         <View
           style={{
             width: '90%',
@@ -282,7 +285,7 @@ const App = (props) => {
               marginTop: 20,
               marginBottom: 3,
             }}>
-            Passenger Travelling
+            Manufactured Year
           </Text>
 
           <TouchableOpacity
@@ -332,6 +335,65 @@ const App = (props) => {
             </View>
           </TouchableOpacity>
 
+          <Text
+            style={{
+              color: 'black',
+
+              fontSize: 12,
+              marginTop: 20,
+              marginBottom: 3,
+            }}>
+            Passenger Car Value
+          </Text>
+
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              borderWidth: 2,
+              borderColor: '#fe4270',
+              borderRadius: 8,
+              width: '100%',
+              height: 45,
+              alignItems: 'center',
+            }}
+            onPress={() => {
+              setOpenDate(!openDate);
+              setopenCountries(false);
+            }}>
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/51.png')}
+                style={{height: 15, width: 15}}
+              />
+            </View>
+            <TextInput
+              style={{
+                flex: 0.8,
+                marginLeft: 5,
+                fontSize: 10,
+              }}
+            />
+
+            <View
+              style={{
+                flex: 0.1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../../assets/icons/52.png')}
+                style={{height: 15, width: 15}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableOpacity>
+
+
           <Button
             title="Search"
             onPress={() => SignupB()}
@@ -349,8 +411,11 @@ const App = (props) => {
             }}
           />
         </View>
-      </ScrollView>
+     
+     
     </ImageBackground>
+      </ScrollView>
+
   ) : (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       <ScrollView
@@ -590,7 +655,7 @@ const App = (props) => {
               marginTop: 20,
               marginBottom: 3,
             }}>
-            Manufatured Car Value
+            Passenger Travelling
           </Text>
 
           <TouchableOpacity
@@ -640,67 +705,10 @@ const App = (props) => {
             </View>
           </TouchableOpacity>
 
-          <Text
-            style={{
-              color: 'black',
-
-              fontSize: 12,
-              marginTop: 20,
-              marginBottom: 3,
-            }}>
-            Estimate Car Value
-          </Text>
-
-          <TouchableOpacity
-            style={{
-              flexDirection: 'row',
-              borderWidth: 2,
-              borderColor: '#fe4270',
-              borderRadius: 8,
-              width: '100%',
-              height: 45,
-              alignItems: 'center',
-            }}
-            onPress={() => {
-              setOpenDate(!openDate);
-              setopenCountries(false);
-            }}>
-            <View
-              style={{
-                flex: 0.1,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <Image
-                source={require('../../assets/icons/51.png')}
-                style={{height: 15, width: 15}}
-              />
-            </View>
-            <TextInput
-              style={{
-                flex: 0.8,
-                marginLeft: 5,
-                fontSize: 10,
-              }}
-            />
-
-            <View
-              style={{
-                flex: 0.1,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <Image
-                source={require('../../assets/icons/52.png')}
-                style={{height: 15, width: 15}}
-                resizeMode="contain"
-              />
-            </View>
-          </TouchableOpacity>
-
+        
           <Button
             title="Search"
-            onPress={() => SignupB()}
+            onPress={() => SignupB2()}
             buttonStyle={{
               backgroundColor: '#ff235d',
               width: '100%',
