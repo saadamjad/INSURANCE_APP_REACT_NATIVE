@@ -36,20 +36,22 @@ const App = (props) => {
             alignItems: 'center',
             paddingVertical: 20,
             // width: '50%',
-            alignSelf: 'center',
+            // alignSelf: 'center',
+            // borderWidth: 1,
           }}>
           <Text style={{fontSize: 20, fontFamily: 'FredokaOne-Regular'}}>
             Welcome!
           </Text>
           <Text
             style={{
-              fontSize: 14,
+              fontSize: 12,
               color: 'black',
               textAlign: 'center',
               marginTop: 5,
+              lineHeight: 15,
               fontFamily: 'Montserrat-Medium',
             }}>
-            Log to see the insurance plans.
+            Log in to see the latest {'\n'} insurance plans.
           </Text>
         </View>
         <View
@@ -58,7 +60,10 @@ const App = (props) => {
             alignSelf: 'center',
             height: 50,
           }}>
-          <Text style={{color: 'black', marginBottom: 5}}> Email </Text>
+          <Text style={{color: 'black', marginBottom: 5, fontSize: 12}}>
+            {' '}
+            Email{' '}
+          </Text>
           <View
             style={{
               flexDirection: 'row',
@@ -81,7 +86,7 @@ const App = (props) => {
               }}
             />
             <TextInput
-              keyboardType="default"
+              keyboardType="email-address"
               style={{
                 flex: 1,
                 marginLeft: 5,
@@ -184,7 +189,10 @@ const App = (props) => {
             textAlign: 'center',
             marginVertical: 15,
             color: 'black',
-            fontFamily: 'Montserrat-Regular',
+            fontSize: 12,
+            fontFamily: 'Montserrat-Medium',
+
+            // fontFamily: 'Montserrat-Regular',
           }}>
           or connect using
         </Text>
@@ -257,8 +265,8 @@ const App = (props) => {
           <Text
             style={{
               textAlign: 'center',
-              marginVertical: 13,
-              fontSize: 10,
+              marginVertical: 12,
+              fontSize: 12,
               color: 'black',
               fontFamily: 'Montserrat-Regular',
             }}>

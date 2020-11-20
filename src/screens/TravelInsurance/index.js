@@ -22,10 +22,10 @@ const App = (props) => {
   const [openDate, setOpenDate] = useState(false);
 
   const [allDate, setAllDate] = useState([
-    {countryName: '29 feb 2020'},
-    {countryName: '28 july 2021'},
-    {countryName: '29 feb 2020'},
-    {countryName: '28 july 2021'},
+    {countryName: 'March/06/2020 '},
+    {countryName: 'March/06/2020 '},
+    {countryName: 'March/06/2020 '},
+    {countryName: 'March/06/2020 '},
   ]);
 
   const [carPolicy, setCarPolicy] = useState(false);

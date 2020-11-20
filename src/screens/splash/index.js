@@ -26,7 +26,7 @@ const image2 = (
 );
 const image3 = (
   <Image
-    source={require('../../assets/icons/icons/3.png')}
+    source={require('../../assets/peoples.jpg')}
     style={{height: '100%', width: '100%'}}
     resizeMode="contain"
   />

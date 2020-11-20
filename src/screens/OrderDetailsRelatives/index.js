@@ -154,7 +154,7 @@ const App = (props) => {
               width: '80%',
               alignSelf: 'center',
               height: 50,
-              marginTop: 20,
+              marginTop: 6,
             }}>
             <Text
               style={{
@@ -538,7 +538,7 @@ const App = (props) => {
               width: '80%',
               alignSelf: 'center',
               height: 50,
-              marginTop: 20,
+              marginTop: 6,
             }}>
             <Text
               style={{
@@ -863,7 +863,7 @@ const App = (props) => {
               width: '80%',
               alignSelf: 'center',
               height: 50,
-              marginTop: 20,
+              marginTop: 6,
             }}>
             <Text
               style={{
@@ -1125,7 +1125,7 @@ const App = (props) => {
               width: '80%',
               alignSelf: 'center',
               height: 50,
-              marginTop: 20,
+              marginTop: 6,
             }}>
             <Text
               style={{
