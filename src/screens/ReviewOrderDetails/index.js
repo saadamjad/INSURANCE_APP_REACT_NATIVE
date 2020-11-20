@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Button} from 'react-native-elements';
 import {Text, View, SafeAreaView} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
@@ -33,18 +33,17 @@ const App = (props) => {
       arrivalCountry: 'Pakistan',
     },
   ]);
- 
+
   useEffect(() => {
     let getState = props.route.params ? props.route.params.carInsurance : false;
     setCarPolicy(getState);
   }, []);
-  const _NextPage=()=>{
-    props.navigation.navigate('orderconfirmed',{
-      carInsurance:carPolicy ? true:false
-
-    })
-  }
-  return carPolicy?(
+  const _NextPage = () => {
+    props.navigation.navigate('orderconfirmed', {
+      carInsurance: carPolicy ? true : false,
+    });
+  };
+  return carPolicy ? (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <ScrollView
         style={{}}
@@ -64,7 +63,7 @@ const App = (props) => {
 
               fontFamily: 'FredokaOne-Regular',
             }}>
-          Car & Owner Details
+            Car & Owner Details
           </Text>
         </View>
 
@@ -94,10 +93,11 @@ const App = (props) => {
                 elevation: 8,
                 marginVertical: 10,
               }}>
-          
               <Text
                 style={{
                   color: '#ff396b',
+                  marginBottom: 5,
+
                   fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -108,8 +108,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 CNIC:{' '}
@@ -121,8 +122,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Contact number:{' '}
@@ -134,32 +136,33 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Date of Inspection :{' '}
-                <Text style={{color: 'black', fontSize: 12}}>12 Mar   2020</Text>
+                <Text style={{color: 'black', fontSize: 12}}>12 Mar 2020</Text>
               </Text>
 
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Preferred Time:{' '}
-                <Text style={{color: 'black', fontSize: 12}}>
-                  12:02
-                </Text>
+                <Text style={{color: 'black', fontSize: 12}}>12:02</Text>
               </Text>
 
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Email:{' '}
@@ -169,8 +172,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Address:{' '}
@@ -181,7 +185,6 @@ const App = (props) => {
             </View>
           );
         })}
-
 
         {/* ==========Buttons========== */}
 
@@ -216,7 +219,7 @@ const App = (props) => {
           <View style={{flex: 0.5, borderWidth: 0, justifyContent: 'center'}}>
             <Button
               title="PAYMENT"
-              onPress={() =>_NextPage()}
+              onPress={() => _NextPage()}
               buttonStyle={{
                 backgroundColor: '#ff396b',
                 width: '90%',
@@ -226,55 +229,12 @@ const App = (props) => {
               titleStyle={{
                 fontSize: 15,
               }}
-              containerStyle={
-                {
-                  // alignItems: 'center',
-                  // justifyContent: 'center',
-                }
-              }
             />
           </View>
-
-          {/* <TouchableOpacity
-            style={{
-              width: 120,
-              height: 45,
-              justifyContent: 'center',
-            }}>
-            <Text
-              style={{
-                color: '#ff4270',
-                // fontWeight: 'bold',
-                textAlign: 'center',
-                // letterSpacing: 1,
-                // fontFamily: 'FredokaOne-Regular',
-                fontFamily: 'Montserrat-Regular',
-              }}>
-              EDIT INFO
-            </Text>
-          </TouchableOpacity>
-          <Button
-            title="PAYMENT"
-            onPress={() => props.navigation.navigate('orderconfirmed')}
-            buttonStyle={{
-              backgroundColor: '#ff396b',
-              width: 140,
-              height: 50,
-              borderRadius: 8,
-            }}
-            titleStyle={{
-              fontSize: 12,
-            }}
-            containerStyle={{
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          /> */}
         </View>
       </ScrollView>
     </SafeAreaView>
-  ):
-  (
+  ) : (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <ScrollView
         style={{}}
@@ -336,6 +296,8 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
+                  marginBottom: 5,
+
                   fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -346,8 +308,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Gender:{' '}
@@ -359,8 +322,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Contact number:{' '}
@@ -372,8 +336,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 CNIC:{' '}
@@ -383,8 +348,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Passport number:{' '}
@@ -396,8 +362,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Email:{' '}
@@ -407,8 +374,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Address:{' '}
@@ -457,8 +425,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Benificiary Name:{' '}
@@ -467,7 +436,7 @@ const App = (props) => {
                     color: 'black',
                     fontSize: 12,
 
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.benificiaryName}
                 </Text>
@@ -476,8 +445,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Contact number:{' '}
@@ -486,7 +456,7 @@ const App = (props) => {
                     color: 'black',
                     fontSize: 12,
 
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.contactNbr}
                 </Text>
@@ -495,8 +465,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 RelationShip:{' '}
@@ -505,7 +476,7 @@ const App = (props) => {
                     color: 'black',
                     fontSize: 12,
 
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.relationship}
                 </Text>
@@ -552,8 +523,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Travel from:{' '}
@@ -562,7 +534,7 @@ const App = (props) => {
                     color: 'black',
                     fontSize: 12,
 
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.travelFrom}
                 </Text>
@@ -571,8 +543,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Travel to:{' '}
@@ -581,7 +554,7 @@ const App = (props) => {
                     color: 'black',
                     fontSize: 12,
 
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.travelTo}
                 </Text>
@@ -590,8 +563,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Departure City:{' '}
@@ -600,7 +574,7 @@ const App = (props) => {
                     color: 'black',
                     fontSize: 12,
 
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.departureCity}
                 </Text>
@@ -609,8 +583,9 @@ const App = (props) => {
               <Text
                 style={{
                   color: '#ff396b',
-                  fontSize: 12,
+                  marginBottom: 5,
 
+                  fontSize: 12,
                   fontFamily: 'Montserrat-Regular',
                 }}>
                 Arrival Country:{' '}
@@ -619,7 +594,7 @@ const App = (props) => {
                     color: 'black',
                     fontSize: 12,
 
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.arrivalCountry}
                 </Text>

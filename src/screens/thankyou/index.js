@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Text, View, SafeAreaView, TouchableOpacity, Image} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -41,13 +41,12 @@ const App = (props) => {
     let getState = props.route.params ? props.route.params.carInsurance : false;
     setCarPolicy(getState);
   }, []);
-  const _NextPage=()=>{
-    props.navigation.navigate('orderconfirmed',{
-      carInsurance:carPolicy ? true:false
-
-    })
-  }
-  return carPolicy? (
+  const _NextPage = () => {
+    props.navigation.navigate('orderconfirmed', {
+      carInsurance: carPolicy ? true : false,
+    });
+  };
+  return carPolicy ? (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -96,10 +95,10 @@ const App = (props) => {
             <Text
               style={{
                 color: 'black',
-                fontSize: 12,
+                fontSize: 13,
                 textAlign: 'center',
 
-                fontFamily: 'Montserrat-Regular',
+                // fontFamily: 'Montserrat-Regular',
               }}>
               Thank you for your order. we will contact you soon
             </Text>
@@ -144,10 +143,11 @@ const App = (props) => {
                   backgroundColor: 'white',
                 }}
                 onPress={() => props.navigation.navigate('visitwebsite')}>
-               
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -166,6 +166,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -178,6 +180,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -190,6 +194,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -202,6 +208,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -214,6 +222,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -225,17 +235,19 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
                   Car Registeration :{' '}
-                  <Text style={{color: 'black', fontSize: 12}}>
-                2211212
-                  </Text>
+                  <Text style={{color: 'black', fontSize: 12}}>2211212</Text>
                 </Text>
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -262,11 +274,10 @@ const App = (props) => {
           })}
 
           {/* ==========Benificiary Details========== */}
-
         </View>
       </ScrollView>
     </SafeAreaView>
-  ):(
+  ) : (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -315,10 +326,10 @@ const App = (props) => {
             <Text
               style={{
                 color: 'black',
-                fontSize: 12,
+                fontSize: 13,
                 textAlign: 'center',
 
-                fontFamily: 'Montserrat-Regular',
+                // fontFamily: 'Montserrat-Regular',
               }}>
               Thank you for your order. we will contact you soon
             </Text>
@@ -375,6 +386,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -393,6 +406,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -405,6 +420,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -417,6 +434,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -429,6 +448,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -441,6 +462,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -503,6 +526,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -515,6 +540,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>
@@ -527,6 +554,8 @@ const App = (props) => {
                 <Text
                   style={{
                     color: '#ff396b',
+                    marginBottom: 5,
+
                     fontSize: 12,
                     fontFamily: 'Montserrat-Regular',
                   }}>

@@ -168,9 +168,9 @@ const App = (props) => {
               flex: 0.6,
               justifyContent: 'space-between',
               flexDirection: 'row',
-              alignItems: 'center',
+              // alignItems: 'center',
               // borderWidth: 1,
-              paddingTop: 20,
+              paddingTop: 45,
               // paddingHorizontal: 15,
             }}>
             <TouchableOpacity
@@ -211,10 +211,11 @@ const App = (props) => {
           <View
             style={{
               flex: 0.4,
-              borderWidth: 0,
+              // borderWidth: 1,
               alignItems: 'center',
-              justifyContent: 'center',
+              // justifyContent: 'center',
               paddingHorizontal: 10,
+              // paddingTop: 10,
             }}>
             <Text
               style={{
@@ -222,6 +223,7 @@ const App = (props) => {
 
                 fontFamily: 'Montserrat-Medium',
                 // fontSize: 12,
+                lineHeight: 20,
               }}>
               {item.title}
             </Text>

@@ -87,35 +87,31 @@ const App = (props) => {
   ]);
 
   const callfunction = () => {
-    props.navigation.navigate('OrderDetailsRelatives',{
-      carInsurance:carPolicy ? true:false
-
+    props.navigation.navigate('OrderDetailsRelatives', {
+      carInsurance: carPolicy ? true : false,
     });
   };
-  
+
   useEffect(() => {
     // console.log('prrrr', props.route.params);
-    
+
     let getState = props.route.params ? props.route.params.carInsurance : false;
     setCarPolicy(getState);
   }, []);
   return carPolicy ? (
-    console.log("sss",carPolicy),
-   
-    <ImageBackground
-      source={require('../../assets/travel/car.png')}
-      style={{
-        height: '100%',
-        width: '100%',
-        resizeMode: 'contain',
-      }}>
-      <ScrollView
-        contentContainerStyle={{flexGrow: 1}}
-        showsVerticalScrollIndicator={false}
-        style={{width:'90%',alignSelf:'center'}}
-        
-        >
- 
+    (console.log('sss', carPolicy),
+    (
+      <ImageBackground
+        source={require('../../assets/travel/car.png')}
+        style={{
+          height: '100%',
+          width: '100%',
+          resizeMode: 'contain',
+        }}>
+        <ScrollView
+          contentContainerStyle={{flexGrow: 1}}
+          showsVerticalScrollIndicator={false}
+          style={{width: '90%', alignSelf: 'center'}}>
           {/* ==========Header Row========== */}
 
           <View
@@ -188,12 +184,13 @@ const App = (props) => {
 
                 <View style={{flexDirection: 'row'}}>
                   <View style={{width: '30%'}}>
-                    <View style={{width: 70, height: 65}}>
+                    <View style={{width: 70, height: 65, borderWidth: 0}}>
                       <Image
                         source={item.image}
                         style={{
                           height: '100%',
                           width: '100%',
+                          borderRadius: 10,
                           resizeMode: 'contain',
                         }}
                       />
@@ -258,7 +255,7 @@ const App = (props) => {
                   <Text
                     style={{
                       color: '#ff235d',
-                      fontSize: 15,
+                      fontSize: 17,
 
                       fontFamily: 'FredokaOne-Regular',
                     }}>
@@ -313,8 +310,9 @@ const App = (props) => {
               </TouchableOpacity>
             );
           })}
-      </ScrollView>
-    </ImageBackground>
+        </ScrollView>
+      </ImageBackground>
+    ))
   ) : (
     <ImageBackground
       source={require('../../assets/icons/bg.jpg')}

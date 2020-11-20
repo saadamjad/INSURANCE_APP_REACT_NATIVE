@@ -93,7 +93,7 @@ const App = (props) => {
               color: 'black',
               fontSize: 11,
               textAlign: 'center',
-              // lineHeight: 15,
+              lineHeight: 15,
               // letterSpacing: 0.5,
               fontFamily: 'Montserrat-Medium',
             }}>
@@ -114,8 +114,8 @@ const App = (props) => {
               color: 'black',
               fontSize: 11,
               textAlign: 'center',
-              lineHeight: 17,
-              letterSpacing: 0.5,
+              lineHeight: 15,
+              // letterSpacing: 0.5,
               fontFamily: 'Montserrat-Medium',
             }}>
             Various versions have evolved over the years, sometimes by accident,

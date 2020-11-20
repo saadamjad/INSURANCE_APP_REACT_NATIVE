@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Button} from 'react-native-elements';
 import {Text, View, SafeAreaView, TextInput, Image} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
@@ -6,10 +6,9 @@ const App = (props) => {
   const [carPolicy, setCarPolicy] = useState(false);
 
   const hireNowFunction = () => {
-    props.navigation.navigate('revieworderdetails',{
-      carInsurance:carPolicy ? true:false
-
-    })
+    props.navigation.navigate('revieworderdetails', {
+      carInsurance: carPolicy ? true : false,
+    });
   };
 
   const [payment, setPayment] = useState([
@@ -25,15 +24,13 @@ const App = (props) => {
     let getState = props.route.params ? props.route.params.carInsurance : false;
     setCarPolicy(getState);
   }, []);
-  const _NextPage=()=>{
-    props.navigation.navigate('MakeaPayment',{
-      carInsurance:carPolicy ? true:false
+  const _NextPage = () => {
+    props.navigation.navigate('MakeaPayment', {
+      carInsurance: carPolicy ? true : false,
+    });
+  };
 
-    })
-  }
-
-  return carPolicy?
-  (
+  return carPolicy ? (
     <ScrollView
       style={{flex: 1, backgroundColor: 'white'}}
       showsVerticalScrollIndicator={false}
@@ -90,6 +87,7 @@ const App = (props) => {
                 style={{
                   color: '#ff235d',
                   fontSize: 12,
+                  marginBottom: 5,
 
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -98,7 +96,7 @@ const App = (props) => {
                   style={{
                     color: 'black',
                     fontSize: 12,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.order}
                 </Text>
@@ -108,6 +106,7 @@ const App = (props) => {
                 style={{
                   color: '#ff235d',
                   fontSize: 12,
+                  marginBottom: 5,
 
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -116,7 +115,7 @@ const App = (props) => {
                   style={{
                     color: 'black',
                     fontSize: 12,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.premium}
                 </Text>
@@ -126,6 +125,7 @@ const App = (props) => {
                 style={{
                   color: '#ff235d',
                   fontSize: 12,
+                  marginBottom: 5,
 
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -134,7 +134,7 @@ const App = (props) => {
                   style={{
                     color: 'black',
                     fontSize: 12,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.tax}
                 </Text>
@@ -144,6 +144,7 @@ const App = (props) => {
                 style={{
                   color: '#ff235d',
                   fontSize: 12,
+                  marginBottom: 5,
 
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -152,7 +153,7 @@ const App = (props) => {
                   style={{
                     color: 'black',
                     fontSize: 12,
-                    fontFamily: 'Montserrat-Medium',
+                    // fontFamily: 'Montserrat-Medium',
                   }}>
                   {item.serviceFee}
                 </Text>
@@ -161,6 +162,7 @@ const App = (props) => {
                 style={{
                   color: '#ff235d',
                   fontSize: 12,
+                  marginBottom: 5,
 
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -169,7 +171,7 @@ const App = (props) => {
                   style={{
                     color: 'black',
                     fontSize: 12,
-                    fontFamily: 'Montserrat-Medium',
+                    // fontFamily: 'Montserrat-Medium',
                   }}>
                   {item.serviceFee}
                 </Text>
@@ -197,8 +199,8 @@ const App = (props) => {
                   style={{
                     color: 'black',
 
-                    fontFamily: 'Montserrat-Medium',
-                    fontSize: 12,
+                    // fontFamily: 'Montserrat-Medium',
+                    fontSize: 14,
                   }}>
                   {item.totalPayment}
                 </Text>
@@ -208,7 +210,7 @@ const App = (props) => {
         })}
 
         {/* ==========Card Details========== */}
-    
+
         <View
           style={{
             width: '100%',
@@ -230,45 +232,44 @@ const App = (props) => {
 
             backgroundColor: 'white',
           }}>
-                <View style={{alignItems: 'center', marginVertical: 5,marginBottom:15}}>
-          <Text
-            style={{
-              color: '#ff4170',
-
-              fontFamily: 'FredokaOne-Regular',
-
-              fontSize: 19,
-              marginVertical: 3,
-            }}>
-            Select Payment Method
-          </Text>
-        </View>
-        <View
+          <View
+            style={{alignItems: 'center', marginVertical: 5, marginBottom: 15}}>
+            <Text
               style={{
-                flexDirection: 'row',
-              
-                alignItems: 'center',
-                justifyContent: 'center',
+                color: '#ff4170',
+
+                fontFamily: 'FredokaOne-Regular',
+
+                fontSize: 19,
+                marginVertical: 3,
               }}>
-              <Image
-                source={require('../../assets/travel/bank.png')}
-                style={{height: 45, width: 55, marginRight: 10}}
-                resizeMode="contain"
-              />
-              <Image
-                source={require('../../assets/travel/cod.png')}
-                style={{height: 45, width: 55, marginRight: 10}}
-                resizeMode="contain"
-              />
-              <Image
-                source={require('../../assets/travel/paydc.png')}
-                style={{height: 45, width: 55, marginRight: 10}}
-                resizeMode="contain"
-              />
-             
-            </View>
-         
-    
+              Select Payment Method
+            </Text>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Image
+              source={require('../../assets/travel/bank.png')}
+              style={{height: 45, width: 55, marginRight: 10}}
+              resizeMode="contain"
+            />
+            <Image
+              source={require('../../assets/travel/cod.png')}
+              style={{height: 45, width: 55, marginRight: 10}}
+              resizeMode="contain"
+            />
+            <Image
+              source={require('../../assets/travel/paydc.png')}
+              style={{height: 45, width: 55, marginRight: 10}}
+              resizeMode="contain"
+            />
+          </View>
+
           <Text
             style={{
               fontSize: 13,
@@ -287,7 +288,7 @@ const App = (props) => {
                 fontSize: 12,
                 marginTop: 10,
                 marginBottom: 3,
-                fontFamily: 'Montserrat-Regular',
+                // fontFamily: 'Montserrat-Regular',
               }}>
               {' '}
               Card Name
@@ -316,7 +317,7 @@ const App = (props) => {
                 color: 'black',
                 fontSize: 12,
                 marginTop: 20,
-                fontFamily: 'Montserrat-Regular',
+                // fontFamily: 'Montserrat-Regular',
                 marginBottom: 3,
               }}>
               {' '}
@@ -369,8 +370,7 @@ const App = (props) => {
                 resizeMode="contain"
               />
             </View>
-         
-         
+
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <View style={{width: '45%'}}>
@@ -380,7 +380,7 @@ const App = (props) => {
                     fontSize: 12,
                     marginTop: 10,
                     marginBottom: 3,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   Expiration Date
                 </Text>
@@ -403,7 +403,6 @@ const App = (props) => {
                     }}
                     placeholderTextColor="black"
                     placeholder="MM/YY"
-                    con
                   />
                 </View>
               </View>
@@ -415,7 +414,7 @@ const App = (props) => {
                     marginBottom: 3,
                     fontSize: 12,
                     marginTop: 10,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   CVV
                 </Text>
@@ -461,13 +460,11 @@ const App = (props) => {
             />
 
             {/* ==========Data is Secured Row========== */}
-       
           </View>
         </View>
       </View>
     </ScrollView>
-  )
-  : (
+  ) : (
     <ScrollView
       style={{flex: 1, backgroundColor: 'white'}}
       showsVerticalScrollIndicator={false}
@@ -524,6 +521,7 @@ const App = (props) => {
                 style={{
                   color: '#ff235d',
                   fontSize: 12,
+                  marginBottom: 5,
 
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -531,8 +529,9 @@ const App = (props) => {
                 <Text
                   style={{
                     color: 'black',
+
                     fontSize: 12,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.order}
                 </Text>
@@ -542,6 +541,7 @@ const App = (props) => {
                 style={{
                   color: '#ff235d',
                   fontSize: 12,
+                  marginBottom: 5,
 
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -550,7 +550,7 @@ const App = (props) => {
                   style={{
                     color: 'black',
                     fontSize: 12,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.premium}
                 </Text>
@@ -560,6 +560,7 @@ const App = (props) => {
                 style={{
                   color: '#ff235d',
                   fontSize: 12,
+                  marginBottom: 5,
 
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -568,7 +569,7 @@ const App = (props) => {
                   style={{
                     color: 'black',
                     fontSize: 12,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   {item.tax}
                 </Text>
@@ -578,6 +579,7 @@ const App = (props) => {
                 style={{
                   color: '#ff235d',
                   fontSize: 12,
+                  marginBottom: 5,
 
                   fontFamily: 'Montserrat-Regular',
                 }}>
@@ -586,7 +588,7 @@ const App = (props) => {
                   style={{
                     color: 'black',
                     fontSize: 12,
-                    fontFamily: 'Montserrat-Medium',
+                    // fontFamily: 'Montserrat-Medium',
                   }}>
                   {item.serviceFee}
                 </Text>
@@ -614,8 +616,8 @@ const App = (props) => {
                   style={{
                     color: 'black',
 
-                    fontFamily: 'Montserrat-Medium',
-                    fontSize: 12,
+                    // fontFamily: 'Montserrat-Medium',
+                    fontSize: 14,
                   }}>
                   {item.totalPayment}
                 </Text>
@@ -664,7 +666,7 @@ const App = (props) => {
                 fontSize: 12,
                 marginTop: 10,
                 marginBottom: 3,
-                fontFamily: 'Montserrat-Regular',
+                // fontFamily: 'Montserrat-Regular',
               }}>
               {' '}
               Card Name
@@ -693,7 +695,7 @@ const App = (props) => {
                 color: 'black',
                 fontSize: 12,
                 marginTop: 20,
-                fontFamily: 'Montserrat-Regular',
+                // fontFamily: 'Montserrat-Regular',
                 marginBottom: 3,
               }}>
               {' '}
@@ -755,7 +757,7 @@ const App = (props) => {
                     fontSize: 12,
                     marginTop: 10,
                     marginBottom: 3,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   Expiration Date
                 </Text>
@@ -790,7 +792,7 @@ const App = (props) => {
                     marginBottom: 3,
                     fontSize: 12,
                     marginTop: 10,
-                    fontFamily: 'Montserrat-Regular',
+                    // fontFamily: 'Montserrat-Regular',
                   }}>
                   CVV
                 </Text>
