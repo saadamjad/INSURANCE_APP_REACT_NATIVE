@@ -1,4 +1,0 @@
-#Fri Nov 20 13:02:41 PKT 2020
-base.0=C\:\\Users\\skluh\\OneDrive\\Desktop\\Kahoodigitals projects\\INSURANCE_APP_REACT_NATIVE\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
