@@ -100,7 +100,7 @@ const _header = (count, props) => {
           : count == 3
           ? 'Car Insurance'
           : count == 4
-          ? 'Heath Insurance'
+          ? 'Health Insurance'
           : null}
       </Text>
       <Text
@@ -122,7 +122,7 @@ const _header = (count, props) => {
           : count == 3
           ? 'Car Insurance bears the cost of accidental damages that may occurs to your car.'
           : count == 4
-          ? 'Heath insurance bears the cost of unforeseen medical costs that occurs if you are admitted in a hospital.'
+          ? 'Health insurance bears the cost of unforeseen medical costs that occurs if you are admitted in a hospital.'
           : null}
       </Text>
     </View>

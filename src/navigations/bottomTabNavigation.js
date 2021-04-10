@@ -3,7 +3,8 @@ import {View, Text, TouchableOpacity, Image} from 'react-native';
 
 const HomeIcon = require('../assets/icons/38.png');
 export default ({state, descriptors, navigation}) => {
-  const focusedOptions = descriptors[state.routes[state.index].key].options;
+  // const focusedOptions = descriptors[state.routes[state.index]?.key]?.options;
+  const focusedOptions = 1;
   console.log('BHAIYAA', focusedOptions);
 
   const navs = [
@@ -16,19 +17,10 @@ export default ({state, descriptors, navigation}) => {
             height: 18,
             width: 18,
 
-            tintColor:
-              focusedOptions.tabBarLabel == 'Home' ? '#ff235d' : '#bcbcbc',
+            tintColor: focusedOptions.tabBarLabel == 'Home',
           }}
         />
       ),
-      // (
-      //   <HomeIcon
-      //     style={{
-      //       fontSize: 17,
-      //       color: focusedOptions.tabBarLabel == 'Home' ? 'red' : 'black',
-      //     }}
-      //   />
-      // ),
     },
     {
       name: 'Find Plans',
@@ -47,16 +39,7 @@ export default ({state, descriptors, navigation}) => {
         />
       ),
     },
-    {
-      name: '',
-      icon: (
-        <Image
-          style={{width: 70, height: 70, marginTop: -40}}
-          source={require('../assets/icons/42.png')}
-          resizeMode="contain"
-        />
-      ),
-    },
+
     {
       name: 'Contact',
       icon: (
@@ -79,7 +62,6 @@ export default ({state, descriptors, navigation}) => {
           style={{
             height: 18,
             width: 18,
-
             tintColor:
               focusedOptions.tabBarLabel == 'Account' ? '#ff235d' : '#bcbcbc',
           }}
@@ -102,30 +84,19 @@ export default ({state, descriptors, navigation}) => {
             alignItems: 'center',
             backgroundColor: 'white',
 
-            flex:
-              i == 0
-                ? 0.2
-                : i == 1
-                ? 0.2
-                : i == 2
-                ? 0.2
-                : i == 3
-                ? 0.2
-                : i == 4
-                ? 0.2
-                : null,
+            flex: i == 0 ? 0.2 : null,
             justifyContent: 'center',
             alignItems: 'center',
-            // backgroundColor: 'blue',
           }}>
           <TouchableOpacity
             onPress={() => {
-              const event = navigation.emit({
-                type: 'tabPress',
-                target: val.name,
-                canPreventDefault: true,
-              });
-              if (!event.defaultPrevented) navigation.navigate(val.name);
+              navigation.navigate('Home');
+              // const event = navigation.emit({
+              //   type: 'tabPress',
+              //   target: val.name,
+              //   canPreventDefault: true,
+              // });
+              // if (!event.defaultPrevented) navigation.navigate(val.name);
             }}
             style={{
               width: '100%',
@@ -140,7 +111,6 @@ export default ({state, descriptors, navigation}) => {
             <Text
               style={{
                 width: '100%',
-                // backgroundColor: 'red',
                 color:
                   focusedOptions.tabBarLabel == val.name
                     ? '#ff235d'
@@ -150,9 +120,6 @@ export default ({state, descriptors, navigation}) => {
                 fontFamily: 'FredokaOne-Regular',
               }}>
               {val.name}
-              {/* {val.name.length <= 6
-                ? val.name
-                : val.name.substring(0, 6).concat('...')} */}
             </Text>
           </TouchableOpacity>
         </View>
